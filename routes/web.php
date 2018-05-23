@@ -13,7 +13,20 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
+
+Route::get('/carpet', function () {
+    return view('carpet');
+})->name('carpet');
+Route::get('/accum', function () {
+    return view('accum');
+})->name('accum');
+Route::get('/tyres', function () {
+    return view('tyres');
+})->name('tyres');
+Route::get('/rims', function () {
+    return view('rims');
+})->name('rims');
 
 Auth::routes();
 
