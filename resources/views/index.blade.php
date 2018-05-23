@@ -54,7 +54,41 @@
 				      </div>
 					  </div>
 					</div>
+			  </div><br>
+			  <div class="popularGoods">
+			  	<h3>Горящие товары</h3>
+			  	<hr>
+			  	<div class="container-fluid">
+				  	<div class="row">
+				  		<div class="popularItem">
+				  			<div>
+				  				<img src="{{ asset('img/items/rims1.png') }}" alt="popularGoods">
+				  			</div>
+				  			<div class="captionItem">
+				  				<div class="carousel-caption">
+					          <h4>Lorem ipsum</h4>
+					          <p>We love the Big Apple!</p>
+					        </div>
+				  			</div>
+				  		</div>
+				  	</div>
+				  	<hr>
+				  	<div class="row">
+				  		<div class="popularItem">
+				  			<div>
+				  				<img src="{{ asset('img/items/accum1.png') }}" alt="popularGoods">
+				  			</div>
+				  			<div class="captionItem">
+				  				<div class="carousel-caption">
+					          <h4>Lorem ipsum</h4>
+					          <p>We love the Big Apple!</p>
+					        </div>
+				  			</div>
+				  		</div>
+				  	</div>
+			  	</div>
 			  </div>
+			  <br>
 			</div>
 			<div class="col-md-9">
 			  <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -160,29 +194,29 @@
 			  <div class="row">
 			  	<div class="col-md-4">
 			  	  <div class="custom-items item3">
-				  	<div class="social img-part-hover"></div>
-				  	<div class="item-description">
-				  	  <h4>следуйте за нами в социальной сети</h4>
-				  	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				  	</div>
-				  	<div class="moreButton">
-				  	  <button>больше</button>
-				  	</div>
-				  </div>
+					  	<div class="social img-part-hover"></div>
+					  	<div class="item-description">
+					  	  <h4>следуйте за нами в социальной сети</h4>
+					  	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					  	</div>
+					  	<div class="moreButton">
+					  	  <button>больше</button>
+					  	</div>
+					  </div>
 			  	</div><br>
 			  	<div class="col-md-4">
 			  	  <div class="custom-items item1">
-				  	<div class="img-part img-part-hover"></div>
-				  	<div class="item-description">
-				  	  <h3>специальные<br>колеса</h3>
-				  	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				  	</div>
-				  	<div class="moreButton">
-				  	  <button>больше</button>
-				  	</div>
-				  </div>
-				</div><br>
-				<div class="col-md-4">
+					  	<div class="img-part img-part-hover"></div>
+					  	<div class="item-description">
+					  	  <h3>специальные<br>колеса</h3>
+					  	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					  	</div>
+					  	<div class="moreButton">
+					  	  <button>больше</button>
+					  	</div>
+					  </div>
+					</div><br>
+					<div class="col-md-4">
 				  <div class="custom-items item2">
 				  	<div class="img-part1 img-part-hover"></div>
 				  	<div class="item-description">
@@ -193,9 +227,26 @@
 				  	  <button>больше</button>
 				  	</div>
 				  </div>
-				</div>
+					</div>
 			  </div>
 			</div>
+	  </div><br>
+	  <div class="container">
+		  <div class="row">
+		  	<div class="recommended">
+		  		<h2>Территория брендов</h2>
+		  		<h4>Товары от лучших производителей на Avtol.uz</h4>
+		  		<div class="col-md-4">
+		  			
+		  		</div>
+		  		<div class="col-md-4">
+		  			
+		  		</div>
+		  		<div class="col-md-4">
+		  			
+		  		</div>
+		  	</div>
+		  </div>
 	  </div>
 	  <br>
 	</div>

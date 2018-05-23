@@ -27,6 +27,7 @@ html,body{
   padding: 0;
   background: $color;
   ul{
+    text-align: center;
     padding-top: 10px;
     margin: 0;
     li{
@@ -59,12 +60,20 @@ html,body{
   list-style: none;
   display: inline;
   width: $width;
+  text-align: center;
   .navbar-nav{
     width: $width;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
     li{
-      margin: 20px 0 40px 0!important;
+      margin: 30px 40px;
       display: inline;
+      text-align: center;
       h2{
+        text-align: center;
         vertical-align: top;
         margin: 25px 0;
       }
@@ -74,15 +83,14 @@ html,body{
         color: #fff;
         left: 40%;
         cursor: pointer;
-        position: relative;
-        top: 50%;
-        transform: translate(-50%,-50%);
+        text-align: center;
       }
       .navCarousel{
         width: $width;
         .item{
           width: 200px;
           height: 150px;
+          margin: 0 auto;
           img{
             width: 100%;
             position: relative;
@@ -96,8 +104,6 @@ html,body{
   }
 }
 
-
-
 .breadcrumb{
   border-radius: 0;
   margin-bottom: 0; 
@@ -109,23 +115,21 @@ html,body{
 .mainNav{
   margin-bottom: 0;
 }
-.halflings-chevron-down {
-  color: #12204D;
-}
-.navbar-nav > li > a i {
-  color: white;
-  font-size: 35px;
-}
-.navbar-nav > li > a:hover {
-  background: none;
-}
-
-.navbar-nav > li > a:focus {
-  background: none;
-}
-
-.navbar-nav > li > a:hover i {
-  color: #1B5E20;
+.navbar-nav{
+  > li{
+    > a{
+      i{
+        color: white;
+        font-size: 35px;
+        &:hover{
+          color: #1B5E20;
+        }
+      }
+      &:hover,&:focus{
+        background: none;
+      }
+    } 
+  }
 }
 
 .navbar-toggle {
@@ -154,7 +158,6 @@ html,body{
   background: linear-gradient(rgba(0,200,80,.4),rgba(255,255,255,.3));
 }*/
 
-
 .mainCarousel > .item > img,
 .mainCarousel > .item > a > img {
   display: block;
@@ -168,11 +171,9 @@ html,body{
 }
 
 /* ------------------- Carousel Styling ------------------- */
-
 .carousel-inner {
   border-radius: 10px;
 }
-
 .carousel-caption {
   background-color: rgba(0,0,0,.5);
   position: absolute;
@@ -223,6 +224,28 @@ a.right {
   right: 1%;
 }
 
+.popularGoods{
+  width: $width;
+  border: 2px solid $color;
+  text-align: center;
+  background: rgba(255,255,255,.9);
+  hr{
+    border: 1px solid $color;
+    width: 95%;
+  }
+  .popularItem{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $width;
+    >div{
+      width: $width;
+      >img{
+        width: 90%;
+      }
+    }
+  }
+}
 
 .content-body {
   border-radius: 5px;
@@ -230,18 +253,8 @@ a.right {
   width: 100%;
   margin-bottom: 20px;
 }
-
 .panel-body {
   padding: 0;
-}
-
-.panel-group .panel + .panel {
-  margin-top: 0;
-  border-top: 0;
-}
-
-.panel-group .panel {
-  border-radius: 0;
 }
 
 .panel-default > .panel-heading {
@@ -262,40 +275,6 @@ a.right {
   text-decoration: none;
 }
 
-.panel-default > .panel-heading a:after {
-  content: "";
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: "Glyphicons Halflings";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  float: right;
-  transition: transform 0.25s linear;
-  -webkit-transition: -webkit-transform 0.25s linear;
-}
-
-.panel-default > .panel-heading a[aria-expanded=true] {
-  background-color: $color;
-  color: #fff;
-}
-
-.panel-default > .panel-heading a[aria-expanded=true]:after {
-  content: "";
-}
-
-.panel-default > .panel-heading a[aria-expanded=false]:after {
-  content: "";
-  color: $color;
-}
-
-.panel-default > .panel-heading a[aria-expanded=true]:hover::after, .panel-default > .panel-heading a[aria-expanded=false]:hover:after {
-  color: #fff;
-}
-
 .panel-default > .panel-heading:hover {
   background-color: $color;
   transition: all 0.3s;
@@ -303,7 +282,7 @@ a.right {
 }
 
 .categories-title {
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
 .categories-title h3 {
@@ -316,104 +295,96 @@ a.right {
 }
 
 .custom-items {
-  width: 100%;
-  height: 100%;
+  width: $width;
+  height: $height;
   border: 1px solid #008c51;
   overflow: hidden;
-}
-
-.custom-items .img-part {
-  width: 100%;
-  height: 250px;
-  background: linear-gradient(rgba(122,183,43,0), rgba(122,183,43,1)), url(../img/custom-item.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 0.4s;
-  z-index: 1;
-}
-
-.custom-items h3, .custom-items h4 {
-  cursor: context-menu;
-  width: 100%;
-  transition: all 0.4s;
-  text-transform: uppercase;
-  font-family: arial black;
-  position: absolute;
-  z-index: 4;
-  text-align: center;
-  left: 50%;
-  top: 48%;
-  transform: translate(-50%, -50%);
-  text-shadow: 0 0 10px #212121;
-  color: #fff;
-}
-
-.custom-items p {
-  cursor: context-menu;
-  position: absolute;
-  z-index: 3;
-  left: 50%;
-  width: 80%;
-  top: 70%;
-  text-align: center;
-  color: #212121;
-  text-transform: uppercase;
-  font-weight: 500;
-  transform: translate(-50%, -50%);
-}
-
-.custom-items .moreButton {
-  width: 100%;
-  height: 60px;
-  background: $color;
-  border: none;
-  text-align: center;
-  padding: 10px 0 25px 0;
-}
-
-.custom-items .moreButton button {
-  position: relative;
-  bottom: 0px;
-  width: 50%;
-  background: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 20px;
-  border: 1px solid #000;
-  text-transform: uppercase;
-  padding: 8px 10px;
-}
-
-.custom-items .moreButton button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: #424242;
-}
-
-.custom-items .img-part1 {
-  width: 100%;
-  height: 250px;
-  background: linear-gradient(rgba(122,183,43,0), rgba(122,183,43,1)), url(../img/custom-item1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 0.4s;
-  z-index: 1;
-}
-
-.custom-items .social {
-  width: 100%;
-  height: 250px;
-  background: linear-gradient(rgba(122,183,43,0), rgba(122,183,43,1)), url(../img/social.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all 0.4s;
-  z-index: 1;
+  .img-part {
+    width: $width;
+    height: 250px;
+    background: linear-gradient(rgba(122,183,43,0), rgba(122,183,43,1)), url(../img/custom-item.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.4s;
+    z-index: 1;
+  }
+  h3,h4{
+    cursor: context-menu;
+    width: $width;
+    transition: all 0.4s;
+    text-transform: uppercase;
+    font-family: arial black;
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px #212121;
+    color: #fff;
+  }
+  p{
+    cursor: context-menu;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    width: 80%;
+    top: 70%;
+    text-align: center;
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: 500;
+    transform: translate(-50%, -50%);
+  }
+  .moreButton {
+    width: 100%;
+    height: 60px;
+    background: $color;
+    border: none;
+    text-align: center;
+    padding: 10px 0 25px 0;
+    button {
+      position: relative;
+      bottom: 0px;
+      width: 50%;
+      background: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 20px;
+      border: 1px solid #000;
+      text-transform: uppercase;
+      padding: 8px 10px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: #424242;
+      }
+    }
+  }
+  .img-part1 {
+    width: $width;
+    height: 250px;
+    background: linear-gradient(rgba(122,183,43,0), rgba(122,183,43,1)), url(../img/custom-item1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.4s;
+    z-index: 1;
+  }
+  .social {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(rgba(122,183,43,0), rgba(122,183,43,1)), url(../img/social.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.4s;
+    z-index: 1;
+  }
 }
 
 .main-items {
-  width: 100%;
-  height: 100%;
+  width: $width;
+  height: $height;
   overflow: hidden;
   border-radius: 3px;
   border: 2px solid $color;
@@ -421,22 +392,20 @@ a.right {
   overflow: hidden;
   text-align: center;
   background: #fff;
-}
-
-.main-items .items-img {
-  overflow: hidden !important;
-  transition: all 0.4s;
-}
-
-.main-items .items-img img {
-  width: 95%;
-  height: 95%;
-  padding: 20px;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  transition: all 0.4s;
+  .items-img {
+    overflow: hidden !important;
+    transition: all 0.4s;
+    img {
+      width: 95%;
+      height: 95%;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      transition: all 0.4s;
+    }
+  }
 }
 
 .item-name {
@@ -465,7 +434,7 @@ a.right {
 }
 
 .items-img:hover + div.item-name > h4 {
-  transform: translateY(-35%);
+  transform: scale(1.2);
   transition: all 0.4s;
 }
 

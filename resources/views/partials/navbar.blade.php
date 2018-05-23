@@ -27,8 +27,8 @@
 						<h4>Тогда звоните нам и мы вам поможем</h4>
 		      </li>
 		      <li><p class="number pulse">+998991002030</p></li>
-		      <li class="navbar-right">
-		      	<div id="myCarousel" class="carousel slide navCarousel" data-ride="carousel">
+		      <li>
+		      	<div id="myCarouselNav" class="carousel slide navCarousel" data-ride="carousel">
 						  <div class="carousel-inner">
 						    <div class="item active">
 						      <img src="{{ asset('img/animCar.gif') }}" alt="animated car">
