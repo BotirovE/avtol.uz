@@ -18,6 +18,7 @@ html,body{
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
+  margin-top: 20px;
 }
 
 .topNavbar {
@@ -39,6 +40,9 @@ html,body{
         color: #fff;
         text-decoration: none;
         padding: 5px;
+        &:hover{
+          color: #1B5E20;
+        };
         i{
           font-size: initial;
         }
@@ -46,37 +50,74 @@ html,body{
     }
   }
 }
+.navbar{
+  background: $color;
+  border-radius: 0;
+  border: none;
+}
+.techSupport{
+  list-style: none;
+  display: inline;
+  width: $width;
+  .navbar-nav{
+    width: $width;
+    li{
+      margin: 20px 0 40px 0!important;
+      display: inline;
+      h2{
+        vertical-align: top;
+        margin: 25px 0;
+      }
+      >.number{
+        font-size: 35px;
+        margin: 35px 0;
+        color: #fff;
+        left: 40%;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .navCarousel{
+        width: $width;
+        .item{
+          width: 200px;
+          height: 150px;
+          img{
+            width: 100%;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.breadcrumb{
+  border-radius: 0;
+  margin-bottom: 0; 
+  background: none;
+}
+.narbarBlock{
+  background: linear-gradient(rgba(122,183,43,.6),rgba(122,183,43,.6));
+}
 .mainNav{
   margin-bottom: 0;
-}
-.nav, .navbar-nav{
-  padding: 0;
 }
 .halflings-chevron-down {
   color: #12204D;
 }
-
-.topNavbar ul li > a:hover {
-  color: #1B5E20;
-}
-
-.navbar {
-  border: 1px solid #C9F8FE;
-  background: $color;
-}
-
 .navbar-nav > li > a i {
   color: white;
   font-size: 35px;
 }
-
-.navbar-nav > li > a {
-  padding: 6px;
-}
-
 .navbar-nav > li > a:hover {
   background: none;
-  color: #bbb;
 }
 
 .navbar-nav > li > a:focus {
@@ -114,8 +155,8 @@ html,body{
 }*/
 
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.mainCarousel > .item > img,
+.mainCarousel > .item > a > img {
   display: block;
   width: 100%;
   height: 380px;

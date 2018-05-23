@@ -13,7 +13,8 @@ html, body {
   background: linear-gradient(rgba(255, 255, 255, 0), white), url(../img/main_back.jpg);
   background-size: 100%;
   background-position: top center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  margin-top: 20px; }
 
 .topNavbar {
   width: 100%;
@@ -32,35 +33,69 @@ html, body {
         color: #fff;
         text-decoration: none;
         padding: 5px; }
+        .topNavbar ul li a:hover {
+          color: #1B5E20; }
         .topNavbar ul li a i {
           font-size: initial; }
+
+.navbar {
+  background: #7AB72B;
+  border-radius: 0;
+  border: none; }
+
+.techSupport {
+  list-style: none;
+  display: inline;
+  width: 100%; }
+  .techSupport .navbar-nav {
+    width: 100%; }
+    .techSupport .navbar-nav li {
+      margin: 20px 0 40px 0 !important;
+      display: inline; }
+      .techSupport .navbar-nav li h2 {
+        vertical-align: top;
+        margin: 25px 0; }
+      .techSupport .navbar-nav li > .number {
+        font-size: 35px;
+        margin: 35px 0;
+        color: #fff;
+        left: 40%;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%); }
+      .techSupport .navbar-nav li .navCarousel {
+        width: 100%; }
+        .techSupport .navbar-nav li .navCarousel .item {
+          width: 200px;
+          height: 150px; }
+          .techSupport .navbar-nav li .navCarousel .item img {
+            width: 100%;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+
+.breadcrumb {
+  border-radius: 0;
+  margin-bottom: 0;
+  background: none; }
+
+.narbarBlock {
+  background: linear-gradient(rgba(122, 183, 43, 0.6), rgba(122, 183, 43, 0.6)); }
 
 .mainNav {
   margin-bottom: 0; }
 
-.nav, .navbar-nav {
-  padding: 0; }
-
 .halflings-chevron-down {
   color: #12204D; }
-
-.topNavbar ul li > a:hover {
-  color: #1B5E20; }
-
-.navbar {
-  border: 1px solid #C9F8FE;
-  background: #7AB72B; }
 
 .navbar-nav > li > a i {
   color: white;
   font-size: 35px; }
 
-.navbar-nav > li > a {
-  padding: 6px; }
-
 .navbar-nav > li > a:hover {
-  background: none;
-  color: #bbb; }
+  background: none; }
 
 .navbar-nav > li > a:focus {
   background: none; }
@@ -89,8 +124,8 @@ html, body {
   height: 100%;
   background: linear-gradient(rgba(0,200,80,.4),rgba(255,255,255,.3));
 }*/
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.mainCarousel > .item > img,
+.mainCarousel > .item > a > img {
   display: block;
   width: 100%;
   height: 380px;

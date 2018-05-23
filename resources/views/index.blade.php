@@ -66,7 +66,7 @@
 					  <li data-target="#myCarousel" data-slide-to="3"></li>
 					</ol>
 				    <!-- Wrapper for slides -->
-					<div class="carousel-inner">
+					<div class="carousel-inner mainCarousel">
 					  <div class="overlay"></div>
 					  <div class="item active">
 					    <img src="{{ asset('img/slider/sample-1.jpg') }}" alt="slider">
