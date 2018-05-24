@@ -61,29 +61,29 @@
 			  	<div class="container-fluid">
 				  	<div class="row">
 				  		<div class="popularItem">
-				  			<div>
+				  			<a href="" class="quick-view">View item</a>
+				  			<a href="">
 				  				<img src="{{ asset('img/items/rims1.png') }}" alt="popularGoods">
-				  			</div>
-				  			<div class="captionItem">
-				  				<div class="carousel-caption">
+					  			<div class="captionItem">
 					          <h4>Lorem ipsum</h4>
 					          <p>We love the Big Apple!</p>
-					        </div>
-				  			</div>
+					  			</div>
+				  			</a>
+					      <a href="#" class="popularMoreBtn">More</a>
 				  		</div>
 				  	</div>
 				  	<hr>
 				  	<div class="row">
 				  		<div class="popularItem">
-				  			<div>
+				  			<a href="" class="quick-view">View item</a>
+				  			<a href="">
 				  				<img src="{{ asset('img/items/accum1.png') }}" alt="popularGoods">
-				  			</div>
-				  			<div class="captionItem">
-				  				<div class="carousel-caption">
+					  			<div class="captionItem">
 					          <h4>Lorem ipsum</h4>
 					          <p>We love the Big Apple!</p>
-					        </div>
-				  			</div>
+					  			</div>
+				  			</a>
+				  			<a href="#" class="popularMoreBtn">More</a>
 				  		</div>
 				  	</div>
 			  	</div>

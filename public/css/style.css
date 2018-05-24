@@ -66,7 +66,6 @@ html, body {
       .techSupport .navbar-nav li > .number {
         font-size: 35px;
         margin: 35px 0;
-        color: #fff;
         left: 40%;
         cursor: pointer;
         text-align: center; }
@@ -147,6 +146,7 @@ html, body {
   z-index: 10;
   padding: 0 0 10px 25px;
   color: #fff;
+  transition: all .3s;
   text-align: left; }
 
 .carousel-indicators {
@@ -194,12 +194,69 @@ a.right {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; }
-    .popularGoods .popularItem > div {
-      width: 100%; }
-      .popularGoods .popularItem > div > img {
-        width: 90%; }
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s; }
+    .popularGoods .popularItem .quick-view {
+      text-decoration: none;
+      font: normal 18px/18px "Roboto", sans-serif;
+      color: #fff;
+      letter-spacing: 0.4px;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      margin: -21px 0 0 -53px;
+      padding: 13px 0;
+      background: #7AB72B;
+      opacity: 0;
+      z-index: 55555;
+      width: 107px;
+      text-align: center;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      -moz-box-shadow: rgba(0, 0, 0, 0.16) 0 2px 8px;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0 2px 8px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0 2px 8px; }
+    .popularGoods .popularItem:hover .quick-view {
+      top: 40%;
+      opacity: 1;
+      border: 1px solid #fff; }
+    .popularGoods .popularItem a > img {
+      width: 90%;
+      transition: all 0.3s; }
+    .popularGoods .popularItem a .captionItem {
+      background: rgba(122, 183, 43, 0.8);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      padding: 0 0 10px 25px;
+      color: #fff;
+      transition: all .3s;
+      text-align: left;
+      z-index: 99998; }
+    .popularGoods .popularItem > .popularMoreBtn {
+      display: none;
+      position: absolute;
+      z-index: 99999;
+      font-size: 18px;
+      color: #7AB72B;
+      padding: 10px 20px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.7);
+      right: 20px;
+      bottom: 20px; }
 
+@media (max-width: 768px) {
+  .popularItem .quick-view {
+    display: none; }
+  .popularItem .popularMoreBtn {
+    display: block !important; } }
 .content-body {
   border-radius: 5px;
   height: 100%;
@@ -390,39 +447,32 @@ footer {
 .footerCategory {
   list-style: none;
   padding: 0; }
-
-ul.footerCategory li {
-  padding: 5px; }
-
-ul.footerCategory li > a {
-  color: #fff;
-  font-size: 16px; }
+  .footerCategory li {
+    padding: 5px; }
+    .footerCategory li > a {
+      color: #fff;
+      font-size: 16px; }
 
 .footerContantBlock p > i {
   padding: 5px; }
 
 .socialBar {
   font-size: 20px;
-  color: #fff; }
-
-.socialBar {
-  margin-top: 20px; }
-
-.socialBar a {
-  font-size: 15px;
   color: #fff;
-  margin: 10px;
-  padding: 5px 5px;
-  text-decoration: none;
-  border-radius: 50%; }
-
-.socialBar a:hover {
-  color: #bbb; }
-
-.socialBar i.fa-circle {
-  position: absolute;
-  border: 0.1 solid initial;
-  margin: 1px -8px;
-  font-size: 30px; }
+  margin-top: 20px; }
+  .socialBar a {
+    font-size: 15px;
+    color: #fff;
+    margin: 10px;
+    padding: 5px 5px;
+    text-decoration: none;
+    border-radius: 50%; }
+    .socialBar a:hover {
+      color: #bbb; }
+  .socialBar i.fa-circle {
+    position: absolute;
+    border: 0.1 solid initial;
+    margin: 1px -8px;
+    font-size: 30px; }
 
 /*# sourceMappingURL=style.css.map */
