@@ -142,51 +142,59 @@
 					</a>
 			  </div>
 			  <br>
-			  <div class="row">
+			  <div class="row centerBlock">
 			  	<div class="col-md-3">
-					  <div class="main-items items1">
-					  	<div class="items-img">
-					  	  <img src="{{ asset('img/items/accum.png') }}" alt="accumulator">
-					  	</div>
-					  	<div class="item-name">
-						  <h4>Аккумуляторы</h4>
-					  	</div>
-					  </div>
+			  		<a href="">
+						  <div class="main-items items1">
+						  	<div class="items-img">
+						  	  <img src="{{ asset('img/items/accum.png') }}" alt="accumulator">
+						  	</div>
+						  	<div class="item-name">
+							  	<h4>Аккумуляторы</h4>
+						  	</div>
+						  </div>
+					  </a>
 			  	</div>
 			  	<br>
 			  	<div class="col-md-3">
-					  <div class="main-items items1">
-					  	<div class="items-img">
-					  	  <img src="{{ asset('img/items/tyres.png') }}" alt="tyres">
-					  	</div>
-					  	<div class="item-name">
-						  <h4>Шины</h4>
-					  	</div>
-					  </div>
+			  		<a href="">
+						  <div class="main-items items1">
+						  	<div class="items-img">
+						  	  <img src="{{ asset('img/items/tyres.png') }}" alt="tyres">
+						  	</div>
+						  	<div class="item-name">
+							  	<h4>Шины</h4>
+						  	</div>
+						  </div>
+					  </a>
 			  	</div>
 			  	<br><br>
 			  	<div class="col-md-3">
-			  	  <div class="main-items items2">
-					  	<div class="items-img">
-					  	  <img src="{{ asset('img/items/carpet.png') }}" alt="carpet">
-					  	</div>
-					  	<div class="item-name">
-					  	  <h4>Полики</h4>
-					  	</div>
-					  </div>
+			  		<a href="">
+				  	  <div class="main-items items2">
+						  	<div class="items-img">
+						  	  <img src="{{ asset('img/items/carpet.png') }}" alt="carpet">
+						  	</div>
+						  	<div class="item-name">
+						  	  <h4>Полики</h4>
+						  	</div>
+						  </div>
+					  </a>
 			  	</div>
 			  	<br>
 			  	<br>
 			  	<br>
 			  	<div class="col-md-3">
-				  <div class="main-items items3">
-				  	<div class="items-img">
-				  	  <img src="{{ asset('img/items/rims.png') }}" alt="rims">
-				  	</div>
-				  	<div class="item-name">
-				  	  <h4>Диски</h4>
-				  	</div>
-				  </div>
+			  		<a href="">
+						  <div class="main-items items3">
+						  	<div class="items-img">
+						  	  <img src="{{ asset('img/items/rims.png') }}" alt="rims">
+						  	</div>
+						  	<div class="item-name">
+						  	  <h4>Диски</h4>
+						  	</div>
+						  </div>
+					  </a>
 			  	</div>
 			  </div>
 			  <br>
@@ -234,16 +242,35 @@
 	  <div class="container">
 		  <div class="row">
 		  	<div class="recommended">
-		  		<h2>Территория брендов</h2>
+		  		<h2>Новые добавленные</h2>
 		  		<h4>Товары от лучших производителей на Avtol.uz</h4>
-		  		<div class="col-md-4">
-		  			
-		  		</div>
-		  		<div class="col-md-4">
-		  			
-		  		</div>
-		  		<div class="col-md-4">
-		  			
+		  		<div class="row">
+			  		<div class="col-md-4">
+			  			<div class="brandItem">
+			  				<img src="{{ asset('img/brand/brandAccum.jpg') }}" alt="brand">
+			  				<div class="brandItemCaption">
+			  					<a href="">Больше</a>
+			  				</div>
+			  			</div>
+			  			<h4>Отличные товары по уникальным ценам</h4>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="brandItem">
+			  				<img src="{{ asset('img/brand/brandTyres.png') }}" alt="brand">
+			  				<div class="brandItemCaption">
+			  					<a href="">Больше</a>
+			  				</div>
+			  			</div>
+			  			<h4>Только любимые бренды</h4>
+			  		</div>
+			  		<div class="col-md-4">
+			  			<div class="brandItem">
+			  				<img src="{{ asset('img/brand/brandTyres1.jpg') }}" alt="brand">
+								<div class="brandItemCaption">
+			  					<a href="">Больше</a>
+			  				</div>
+			  			</div>
+			  		</div>
 		  		</div>
 		  	</div>
 		  </div>

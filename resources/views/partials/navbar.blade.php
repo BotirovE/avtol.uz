@@ -26,7 +26,10 @@
 						<h2>Сломался ваш автомобиль?</h2>
 						<h4>Тогда звоните нам и мы вам поможем</h4>
 		      </li>
-		      <li><p class="number pulse">+998991002030</p></li>
+		      <li>
+		      	<h3>Линия поддержки</h3>
+		      	<p class="number pulse">+998991002030</p>
+		      </li>
 		      <li>
 		      	<div id="myCarouselNav" class="carousel slide navCarousel" data-ride="carousel">
 						  <div class="carousel-inner">
@@ -46,6 +49,7 @@
 		  </div>
 		</nav>
 	</div>
+
 	<!-- second main nav -->
 	<div class="container">
 		<nav class="navbar mainNav">
