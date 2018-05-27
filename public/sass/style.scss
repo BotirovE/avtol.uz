@@ -528,7 +528,6 @@ a.right {
 
 footer {
   width: 100%;
-  height: 100%;
   padding: 20px;
   background: $color url(../img/pattern.png);
   color: #fff;
@@ -619,6 +618,15 @@ ul.social-buttons li a{
         color: #E0E0E0;
       }
     }
+  }
+}
+
+.filterBar{
+  border: 1px solid $color;
+  width: $width;
+  padding: 10px;
+  #tyresSeason,#tyresBrand{
+    font-size: 15px;
   }
 }
 
