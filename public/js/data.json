@@ -1,0 +1,155 @@
+var tyres = [
+  {
+    "id":1,
+    "brand":"Pirelli",
+    "qty": 1,
+    "type":"Легковые шины",
+    "season":"Летные шины",
+    "diametr":"14",
+    "size":"145/65",
+    "price":"565000"
+  },
+  {
+    "id":2,
+    "qty": 1,
+    "brand":"Pirelli",
+    "type":"Легко-грузовые шины",
+    "season":"Зимные шины",
+    "diametr":"19",
+    "price":"665000",
+    "size":"135/80"
+  },
+  {
+    "id":3,
+    "qty": 1,
+    "brand":"Cooper",
+    "type":"Грузовые шины",
+    "season":"Всесезонные шины",
+    "diametr":"17",
+    "size":"145/70",
+    "price":"405000"
+  },
+  {
+    "id":4,
+    "qty": 1,
+    "brand":"Hankook",
+    "type":"Сельскохозяйственные шины",
+    "season":"Всесезонные шины",
+    "diametr":"15",
+    "size":"155/60",
+    "price":"652000"
+  },
+  {
+    "id":5,
+    "qty": 1,
+    "brand":"Dunlop",
+    "type":"Шины для спец техники",
+    "season":"Зимные шины",
+    "diametr":"12",
+    "size":"165/80",
+    "price":"706000"
+  },
+  {
+    "id":6,
+    "qty": 1,
+    "brand":"Pirelli",
+    "type":"Легковые шины",
+    "season":"Летные шины",
+    "diametr":"13",
+    "size":"135/80",
+    "price":"563000"
+  },
+  {
+    "id":7,
+    "qty": 1,
+    "brand":"Dunlop",
+    "type":"Легко-грузовые шины",
+    "season":"Зимные шины",
+    "diametr":"19",
+    "size":"185",
+    "price":"466000"
+  },
+  {
+    "id":8,
+    "qty": 1,
+    "brand":"Cooper",
+    "type":"Грузовые шины",
+    "season":"Всесезонные шины",
+    "diametr":"17",
+    "size":"145/70",
+    "price":"666000"
+  },
+  {
+    "id":9,
+    "qty": 1,
+    "brand":"Hankook",
+    "type":"Сельскохозяйственные шины",
+    "season":"Всесезонные шины",
+    "diametr":"15",
+    "size":"155/60",
+    "price":"650000"
+  },
+  {
+    "id":10,
+    "qty": 1,
+    "brand":"Dunlop",
+    "type":"Шины для спец техники",
+    "season":"Зимные шины",
+    "diametr":"12",
+    "size":"165/80",
+    "price":"684000"
+  },
+];
+
+var accum = [
+  {
+    "id":1,
+    "brand":"Atlant",
+    "qty": 1,
+    "name":"6CT-35",
+    "capacity":"35",
+    "size":"199x131x227",
+    "price":"290000",
+    "avto" : "matiz"
+  },
+  {
+    "id":2,
+    "brand":"Energy",
+    "qty": 1,
+    "name":"6CT-50",
+    "capacity":"50",
+    "size":"200x170x190",
+    "price":"355000",
+    "avto" : "spark"
+  },
+  {
+    "id":3,
+    "brand":"hoppenergy",
+    "qty": 1,
+    "name":"6CT-66",
+    "capacity":"66",
+    "size":"277x175x190",
+    "price":"450000",
+    "avto" : "volga"
+  },
+  {
+    "id":4,
+    "brand":"Daz",
+    "qty": 1,
+    "name":"6CT-55",
+    "capacity":"55",
+    "size":"242x175x190",
+    "price":"380000",
+    "avto" : "neksiya"
+  },
+  {
+    "id":5,
+    "brand":"KUCH",
+    "qty": 1,
+    "name":"6CT-150",
+    "capacity":"150",
+    "size":"515x191x239",
+    "price":"920000",
+    "avto" : "zil"
+  },
+];

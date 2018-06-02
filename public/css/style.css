@@ -529,6 +529,19 @@ ul.social-buttons li a {
   .filterBar #tyresSeason, .filterBar #tyresBrand {
     font-size: 15px; }
 
+.tyresList .item, .accumList .item {
+  border: 1px solid #7AB72B;
+  margin: 0 0 10px 0;
+  padding: 20px; }
+  .tyresList .item a, .accumList .item a {
+    font-size: 20px; }
+  .tyresList .item img, .accumList .item img {
+    width: 100%; }
+  .tyresList .item h4, .accumList .item h4 {
+    margin-bottom: 25px; }
+  .tyresList .item:hover, .accumList .item:hover {
+    box-shadow: 0 0 15px #7AB72B; }
+
 @media (max-width: 768px) {
   .popularItem .quick-view {
     display: none; }

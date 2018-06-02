@@ -60,7 +60,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>                        
 		      </button>
-		      <a class="navbar-brand" href="#">avtol.uz</a>
+		      <a class="navbar-brand" href="{{ route('index') }}">avtol.uz</a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
@@ -78,7 +78,7 @@
 		        </li>
 		        <li>
 		          <a href="#">
-		        	<i class="fas fa-shopping-cart"></i>
+		        		<i class="fas fa-shopping-cart"></i>
 		          </a>
 		        </li>
 		      </ul>
