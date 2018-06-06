@@ -10,32 +10,32 @@
 						<div>
 						<!-- Tyres type -->
 						<h5><strong>Тип шины</strong></h5>
-          	<select  class="form-control" name="tyresType" id="tyresType" ng-model="type" ng-options="type for type in tyresType">
-              <option value="" disabled selected hidden>Выберите тип шин</option>
+          	<select  class="form-control" name="tyresType" id="tyresType" ng-model="filter.type" ng-options="type for type in tyresType">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						
 						<!-- Tyres season -->
 						<h5><strong>Сезонность шин</strong></h5>
-						<select  class="form-control" name="tyresSeason" id="tyresSeason" ng-model="season" ng-options="season for season in tyresSeason">
-              <option value="" disabled selected hidden>Выберите сезонность шин</option>
+						<select  class="form-control" name="tyresSeason" id="tyresSeason" ng-model="filter.season" ng-options="season for season in tyresSeason">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						<hr>
 						<!-- Tyres brand -->
 						<h5><strong>Бренд</strong></h5>
-						<select  class="form-control" name="tyresBrand" id="tyresBrand" ng-model="brand" ng-options="brand for brand in tyresBrand">
-              <option value="" disabled selected hidden>Выберите бренд шин</option>
+						<select  class="form-control" name="tyresBrand" id="tyresBrand" ng-model="filter.brand" ng-options="brand for brand in tyresBrand">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						
 						<!-- Tyres diametr -->
 						<h5><strong>Диаметр</strong></h5>
-						<select  class="form-control" name="tyresDiametr" id="tyresDiametr" ng-model="diametr" ng-options="diametr for diametr in tyresDiametr">
-              <option value="" disabled selected hidden>Выберите диаметр шин</option>
+						<select  class="form-control" name="tyresDiametr" id="tyresDiametr" ng-model="filter.diametr" ng-options="diametr for diametr in tyresDiametr">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						
 						<!-- Tyres size -->
 						<h5><strong>Размерность</strong></h5>
-						<select  class="form-control" name="tyresSize" id="tyresSize" ng-model="size" ng-options="size for size in tyresSize">
-              <option value="" disabled selected hidden>Выберите размерность шин</option>
+						<select  class="form-control" name="tyresSize" id="tyresSize" ng-model="filter.size" ng-options="size for size in tyresSize">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						<br>
             <input type="reset" ng-click="resetFilter()" class="btn btn-primary">
@@ -47,7 +47,7 @@
 				<div class="list">
 					<div class="row tyresList">
 						<div class="col-md-12">
-							<div class="item" ng-repeat="tyre in tyres| filter: type | filter: diametr | filter: season | filter: brand | filter: size">
+							<div class="item" ng-repeat="tyre in tyres| filter:filter">
 								<a href="">@{{ tyre.brand }}</a>
 								<br><br>
 								<div class="row">
@@ -74,12 +74,10 @@
 	    <div class="row">
 	      <h2>Your Cart:</h2>
 	      <ul>
-	        <li class="animate-repeat" ng-repeat="item in cart | orderBy:'category'">
+	        <li class="animate-repeat" ng-repeat="item in cart">
 	          <div><span>@{{ item.qty + ' x ' + item.brand + ' = ' + getCost(item) }}</span></div>
 	      		<div><input type="number" ng-model="item.qty" class="qty"></div>
 	          <button class="btn-danger btn-xs" ng-click="removeItem(item);">Remove Item</button>
-	          </br>
-	          </br>
 	        </li>
 	      </ul>
 	      <h3>Total: @{{ getTotal() }}</h3>

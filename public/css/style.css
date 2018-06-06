@@ -529,17 +529,17 @@ ul.social-buttons li a {
   .filterBar #tyresSeason, .filterBar #tyresBrand {
     font-size: 15px; }
 
-.tyresList .item, .accumList .item {
+.tyresList .item, .accumList .item, .rimsList .item, .carpetList .item {
   border: 1px solid #7AB72B;
   margin: 0 0 10px 0;
   padding: 20px; }
-  .tyresList .item a, .accumList .item a {
+  .tyresList .item a, .accumList .item a, .rimsList .item a, .carpetList .item a {
     font-size: 20px; }
-  .tyresList .item img, .accumList .item img {
+  .tyresList .item img, .accumList .item img, .rimsList .item img, .carpetList .item img {
     width: 100%; }
-  .tyresList .item h4, .accumList .item h4 {
+  .tyresList .item h4, .accumList .item h4, .rimsList .item h4, .carpetList .item h4 {
     margin-bottom: 25px; }
-  .tyresList .item:hover, .accumList .item:hover {
+  .tyresList .item:hover, .accumList .item:hover, .rimsList .item:hover, .carpetList .item:hover {
     box-shadow: 0 0 15px #7AB72B; }
 
 @media (max-width: 768px) {

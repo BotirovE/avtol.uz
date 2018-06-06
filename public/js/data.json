@@ -153,3 +153,63 @@ var accum = [
     "avto" : "zil"
   },
 ];
+
+var rims = [
+  {
+    "id":1,
+    "brand":"WSP Italy",
+    "qty": 1,
+    "hole":"4x114,3",
+    "color":"Серебро",
+    "size":"6x15",
+    "price":"920000",
+    "hubDiametr":"56.6"
+  },
+  {
+    "id":2,
+    "brand":"VAG",
+    "qty": 1,
+    "hole":"5x112",
+    "color":"Серебро",
+    "size":"6x16",
+    "price":"600000",
+    "hubDiametr":"57.1"
+  },
+  {
+    "id":3,
+    "brand":"Opel",
+    "qty": 1,
+    "hole":"5x110",
+    "color":"Серебро",
+    "size":"6.5x16",
+    "price":"565000",
+    "hubDiametr":"65.1"
+  },
+  {
+    "id":4,
+    "brand":"VAG",
+    "qty": 1,
+    "hole":"5x112",
+    "color":"Серый",
+    "size":"7.5x18",
+    "price":"862000",
+    "hubDiametr":"57.1"
+  },
+];
+
+var carpet = [
+  {
+    "id": 1,
+    "brand":"Airline",
+    "qty":1,
+    "color":"Чёрный",
+    "price":"120000"
+  },
+  {
+    "id": 2,
+    "brand":"Novline",
+    "qty":1,
+    "color":"Красный",
+    "price":"112000"
+  },
+];

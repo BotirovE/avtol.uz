@@ -10,32 +10,32 @@
 						<div>
 						<!-- Accum brand -->
 						<h5><strong>Бренд</strong></h5>
-						<select  class="form-control" name="accumBrand" id="accumBrand" ng-model="brand" ng-options="brand for brand in accumBrand">
-              <option value="" disabled selected hidden>Выберите бренд АКБ</option>
+						<select  class="form-control" name="accumBrand" id="accumBrand" ng-model="accumFilter.brand" ng-options="brand for brand in accumBrand">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 
             <!-- Accum name -->
 						<h5><strong>Наименование АКБ</strong></h5>
-						<select  class="form-control" name="accumName" id="accumName" ng-model="name" ng-options="name for name in accumName">
-              <option value="" disabled selected hidden>Выберите наименование АКБ</option>
+						<select  class="form-control" name="accumName" id="accumName" ng-model="accumFilter.name" ng-options="name for name in accumName">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 
             <!-- Accum capacity -->
 						<h5><strong>Емкость АКБ (А/ч)</strong></h5>
-						<select  class="form-control" name="accumCapacity" id="accumCapacity" ng-model="capacity" ng-options="capacity for capacity in accumCapacity">
-              <option value="" disabled selected hidden>Выберите емкость АКБ</option>
+						<select  class="form-control" name="accumCapacity" id="accumCapacity" ng-model="accumFilter.capacity" ng-options="capacity for capacity in accumCapacity">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 
             <!-- Accum size -->
 						<h5><strong>Размер АКБ</strong></h5>
-						<select  class="form-control" name="accumSize" id="accumSize" ng-model="size" ng-options="size for size in accumSize">
-              <option value="" disabled selected hidden>Выберите размер АКБ</option>
+						<select  class="form-control" name="accumSize" id="accumSize" ng-model="accumFilter.size" ng-options="size for size in accumSize">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						
 						<!-- Accum size -->
 						<h5><strong>АКБ для авто</strong></h5>
-						<select class="form-control" name="accumAvto" id="accumAvto" ng-model="avto" ng-options="avto for avto in accumAvto">
-              <option value="" disabled selected hidden>Выберите АКБ для авто</option>
+						<select class="form-control" name="accumAvto" id="accumAvto" ng-model="accumFilter.avto" ng-options="avto for avto in accumAvto">
+              <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						<br>
             <input type="reset" ng-click="resetFilter()" class="btn btn-primary">
@@ -47,7 +47,7 @@
 				<div class="list">
 					<div class="row accumList">
 						<div class="col-md-12">
-							<div class="item" ng-repeat="accum in accum| filter: type | filter: diametr | filter: season | filter: brand | filter: size">
+							<div class="item" ng-repeat="accum in accum| filter: accumFilter">
 								<a href="">@{{ accum.brand }}</a>
 								<br><br>
 								<div class="row">
