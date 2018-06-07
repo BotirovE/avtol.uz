@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Tyre extends Model
 {
     /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = ['brands'];
+    
+    /**
      * Get all of the tyre's orders.
      */
     public function orders()

@@ -18,7 +18,6 @@ class CreateBrandablesTable extends Migration
             $table->integer('brandable_id')->unsigned();
             $table->string('brandable_type', 20);
             $table->index(['brand_id', 'brandable_id', 'brandable_type']);
-            $table->timestamps();
         });
     }
 

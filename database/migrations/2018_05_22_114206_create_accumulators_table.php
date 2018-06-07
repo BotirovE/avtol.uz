@@ -15,12 +15,15 @@ class CreateAccumulatorsTable extends Migration
     {
         Schema::create('accumulators', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',30);
+            $table->string('name',20)->nullable();
             $table->double('price');
-            $table->double('voltage');
+            // $table->double('voltage');
             $table->double('capacity');
-            $table->string('size',20);
-            $table->string('image_path', 50)->nullable();
+            $table->double('height');
+            $table->double('width');
+            $table->double('length');
+            $table->string('comment', 50)->nullable();
+            // $table->string('image_path', 50)->nullable();
             $table->timestamps();
         });
     }

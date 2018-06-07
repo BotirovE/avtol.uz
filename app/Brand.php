@@ -7,11 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Brand extends Model
 {
     /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = [];
+    /**
      * Get all of the wheels that are assigned this brand.
      */
     public function wheels()
     {
-        return $this->morphedByMany('App\Wheel', 'orderable');
+        return $this->morphedByMany('App\Wheel', 'brandable');
     }
 
     /**
@@ -19,7 +25,7 @@ class Brand extends Model
      */
     public function tyres()
     {
-        return $this->morphedByMany('App\Tyre', 'orderable');
+        return $this->morphedByMany('App\Tyre', 'brandable');
     }
 
     /**
@@ -27,7 +33,7 @@ class Brand extends Model
      */
     public function mats()
     {
-        return $this->morphedByMany('App\Mat', 'orderable');
+        return $this->morphedByMany('App\Mat', 'brandable');
     }
 
     /**
@@ -35,7 +41,7 @@ class Brand extends Model
      */
     public function accumulators()
     {
-        return $this->morphedByMany('App\Accumulator', 'orderable');
+        return $this->morphedByMany('App\Accumulator', 'brandable');
     }
 
 }
