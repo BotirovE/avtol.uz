@@ -3,7 +3,7 @@
 @section('content')
 	<div class="container" ng-controller="tyresSortController">
 		<h2>Шины</h2>
-		<div class="row" ng-controller="cart">
+		<div class="row">
 			<div class="col-md-3">
 				<div class="filterBar">
 					<form action="">
@@ -48,7 +48,7 @@
 					<div class="row tyresList">
 						<div class="col-md-12">
 							<div class="item" ng-repeat="tyre in tyres| filter:filter">
-								<a href="">@{{ tyre.brand }}</a>
+								<a href="{{ route('product') }}">@{{ tyre.brand }}</a>
 								<br><br>
 								<div class="row">
 									<div class="col-md-3">
@@ -62,28 +62,15 @@
 									</div>
 									<div class="col-md-4">
 										<h4>@{{ tyre.price + ' sum' }}</h4>
-										<h4><a href="">подробно...</a></h4>
-										<button class="btn-primary" ng-click="addItem(tyre)">Add to Cart</button>
+										<h4><a ui-sref="product.detail({tyre: id})" href="{{ route('product') }}">подробно...</a></h4>
+										<button class="btn btn-primary" ng-click="addItem(tyre)">Add to Cart</button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 	      </div>
-    
-	    <div class="row">
-	      <h2>Your Cart:</h2>
-	      <ul>
-	        <li class="animate-repeat" ng-repeat="item in cart">
-	          <div><span>@{{ item.qty + ' x ' + item.brand + ' = ' + getCost(item) }}</span></div>
-	      		<div><input type="number" ng-model="item.qty" class="qty"></div>
-	          <button class="btn-danger btn-xs" ng-click="removeItem(item);">Remove Item</button>
-	        </li>
-	      </ul>
-	      <h3>Total: @{{ getTotal() }}</h3>
-	      <button class="btn-danger" ng-click="clearCart();">Clear Cart</button>
-	    </div>
-	  </div>
+		  </div>
 		</div>
 	</div>
 	<br>

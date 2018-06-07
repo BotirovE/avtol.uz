@@ -76,10 +76,29 @@
 					</div>
 				  </form>
 		        </li>
-		        <li>
-		          <a href="#">
-		        		<i class="fas fa-shopping-cart"></i>
-		          </a>
+		        <li class="dropdown">
+		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i></a>
+		          <div class="dropdown-menu">
+								<div class="panel">
+									<div class="panel-heading cart-panel-heading">Корзина</div>
+									<div class="panel-body">
+							      <ul>
+							        <li class="animate-repeat" ng-repeat="item in cart">
+							          <div><span>@{{ item.qty + ' x ' + item.brand + ' = ' + getCost(item) }}</span></div>
+							      		<div><input type="number" ng-model="item.qty" class="qty"></div>
+							          <button class="btn btn-danger btn-xs" ng-click="removeItem(item);">Remove Item</button>
+							        </li>
+							      </ul>
+							      <hr>
+							      <h3>Total: @{{ total }}</h3>
+							      <button class="btn btn-danger" ng-click="clearCart();">Clear Cart</button>
+									</div>
+									<br>
+									<div class="panel-footer cart-panel-footer">
+										div.col-sm-
+									</div>
+								</div>
+		          </div>
 		        </li>
 		      </ul>
 		    </div>

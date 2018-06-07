@@ -18,7 +18,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   
 </head>
-<body>
+<body ng-controller="cart">
   <script type="text/javascript" src="{{ asset('js/data.json') }}"></script>
   <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
   <div id="app">
@@ -30,5 +30,6 @@
       </div>
     </div>
   </div>
+<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

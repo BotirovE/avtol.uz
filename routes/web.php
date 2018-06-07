@@ -28,6 +28,10 @@ Route::get('/rims', function () {
     return view('rims');
 })->name('rims');
 
+Route::get('/product', function () {
+    return view('individual');
+})->name('product');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

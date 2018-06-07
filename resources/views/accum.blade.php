@@ -3,7 +3,7 @@
 @section('content')
 	<div class="container" ng-controller="accumSortController">
 		<h2>Аккумуляторы</h2>
-		<div class="row" ng-controller="cart">
+		<div class="row">
 			<div class="col-md-3">
 				<div class="filterBar">
 					<form action="">
@@ -70,22 +70,7 @@
 						</div>
 					</div>
 	      </div>
-    
-	    <div class="row">
-	      <h2>Your Cart:</h2>
-	      <ul>
-	        <li class="animate-repeat" ng-repeat="item in cart | orderBy:'category'">
-	          <div><span>@{{ item.qty + ' x ' + item.brand + ' = ' + getCost(item) }}</span></div>
-	      		<div><input type="number" ng-model="item.qty" class="qty"></div>
-	          <button class="btn-danger btn-xs" ng-click="removeItem(item);">Remove Item</button>
-	          </br>
-	          </br>
-	        </li>
-	      </ul>
-	      <h3>Total: @{{ getTotal() }}</h3>
-	      <button class="btn-danger" ng-click="clearCart();">Clear Cart</button>
-	    </div>
-	  </div>
+	  	</div>
 		</div>
 	</div>
 	<br>

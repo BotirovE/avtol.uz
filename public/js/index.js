@@ -109,6 +109,8 @@ app.controller('cart', function ($scope) {
 app.controller('cart', function ($scope) {
   
   $scope.cart = [];
+ 	$scope.total = 0;
+
   function saveCart() {
     localStorage.setItem("shoppingCart", JSON.stringify($scope.cart));
   }
@@ -149,9 +151,8 @@ app.controller('cart', function ($scope) {
 		 		 	$scope.cart.push(product);	
 		 		}
 		 	}
-    // $scope.count++;
-    //     $scope.cart.push(angular.copy(brand, price, qty));
-        saveCart();
+		 	$scope.total += parseFloat(product.price);
+      saveCart();
     };
 
 
@@ -173,4 +174,18 @@ app.controller('cart', function ($scope) {
     $scope.cart.splice(index, 1);
   	saveCart();
   };
+});
+
+$(function(){
+$(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+            $(this).toggleClass('open');
+            $('b', this).toggleClass("caret caret-up");                
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+            $(this).toggleClass('open');
+            $('b', this).toggleClass("caret caret-up");                
+        });
 });

@@ -120,6 +120,9 @@ html,body{
 .mainNav{
   margin-bottom: 0;
 }
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+  background: none;
+}
 .navbar-nav{
   > li{
     > a{
@@ -141,6 +144,31 @@ html,body{
       margin-bottom: 8px;
       margin-left: -15px;
     } 
+    .dropdown-menu{
+      width: 230px;
+      padding: 0;
+      .panel{
+        border-radius: 0;
+        border:none;
+        .cart-panel-footer{
+          position: absolute;
+          width: 100%;
+          border-radius: 0;
+          bottom: 0;
+          background-color: $color;
+        }
+        .cart-panel-heading{
+          background-color: $color;
+          border-radius: 0;
+        }
+      }
+    }
+    .dropdown{
+      &:hover{
+        background: none;
+      }
+
+    }
   }
 }
 .navbar-brand {
@@ -151,20 +179,20 @@ html,body{
   margin-right: -15px;
   margin-bottom: 8px;
   margin-left: -15px;
+  &:hover{
+    color: #fff;
+  }
 }
 
 .navbar-toggle {
   border: 1px solid white;
+  .icon-bar {
+    border: 1px solid white;
+  }
 }
 
-.navbar-toggle .icon-bar {
-  border: 1px solid white;
-}
+.navbar-toggle 
 
-
-.navbar-brand:hover {
-  color: #fff;
-}
 
 /*.carousel-inner .overlay {
   position: absolute;
@@ -645,6 +673,41 @@ ul.social-buttons li a{
     }
     &:hover{
       box-shadow: 0 0 15px $color;
+    }
+  }
+}
+.itemDescr{
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 5px #bbb;
+  padding: 15px;
+}
+.individualItem{
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 5px #bbb;
+  padding: 15px;
+  img{
+    width: 100%;
+  }
+  .tyre-Brand{
+    margin: 10px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  .itemInfo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .priceBlock{
+    top: 25px;
+    position: relative;
+    h4{
+      span{
+        color: $color;
+        font-size: 32px;
+      }
     }
   }
 }
