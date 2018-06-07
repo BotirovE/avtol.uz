@@ -15,7 +15,10 @@ class CreateMatsTable extends Migration
     {
         Schema::create('mats', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('something',50);
+            $table->double('price');
+            $table->string('color',20)->nullable();
+            $table->string('comment',50)->nullable();
+            // $table->string('image_path',50)->nullable();
             $table->timestamps();
         });
     }

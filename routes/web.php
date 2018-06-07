@@ -30,4 +30,29 @@ Route::get('/rims', function () {
 
 Auth::routes();
 
+Route::prefix('admin')->name('admin.')->group(function () {
+	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('login');
+	Route::post('/login', 'Auth\AdminLoginController@login')->name('login.submit');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::namespace('Admin')->middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', 'AdminController')->name('dashboard');
+    Route::resource('accums', 'AccumulatorController')->only([
+    'store', 'update', 'destroy'
+    ]);
+    Route::resource('mats', 'MatController')->only([
+    'store', 'update', 'destroy'
+    ]);
+    Route::resource('tyres', 'TyreController')->only([
+    'store', 'update', 'destroy'
+    ]);
+    Route::resource('wheels', 'WheelController')->only([
+    'store', 'update', 'destroy'
+    ]);
+    Route::resource('brands', 'BrandController')->only([
+    'store', 'update', 'destroy'
+    ]);
+});
+

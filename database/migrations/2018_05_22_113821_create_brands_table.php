@@ -16,7 +16,7 @@ class CreateBrandsTable extends Migration
         Schema::create('brands', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->boolean('isCar');//brand of a Car or a Product itself?
+            $table->boolean('isCar')->default(0);//brand of a Car or a Product itself?
             $table->timestamps();
         });
     }

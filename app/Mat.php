@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Mat extends Model
 {
     /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = ['image','brands'];
+    
+    /**
      * Get all of the mat's orders.
      */
     public function orders()
