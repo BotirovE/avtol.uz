@@ -77,25 +77,24 @@
 				  </form>
 		        </li>
 		        <li class="dropdown">
-		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i></a>
+		        	<div class="dropdown-toggle cart-Logo" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i></div>
 		          <div class="dropdown-menu">
 								<div class="panel">
 									<div class="panel-heading cart-panel-heading">Корзина</div>
-									<div class="panel-body">
-							      <ul>
+									<div class="panel-body cart-panel-body">
+							      <ul class="cartList">
 							        <li class="animate-repeat" ng-repeat="item in cart">
-							          <div><span>@{{ item.qty + ' x ' + item.brand + ' = ' + getCost(item) }}</span></div>
-							      		<div><input type="number" ng-model="item.qty" class="qty"></div>
+							          <div><span>@{{ item.count + ' x ' + item.brand + ' = ' + getCost(item) }}</span></div>
+							      		<div><input type="number" ng-model="item.count" class="count"></div>
 							          <button class="btn btn-danger btn-xs" ng-click="removeItem(item);">Remove Item</button>
 							        </li>
 							      </ul>
 							      <hr>
-							      <h3>Total: @{{ total }}</h3>
-							      <button class="btn btn-danger" ng-click="clearCart();">Clear Cart</button>
+							      <h4>Total: @{{ total }}</h4>
+							      <button class="btn btn-danger btn-xs" ng-click="clearCart();">Clear Cart</button>
 									</div>
-									<br>
 									<div class="panel-footer cart-panel-footer">
-										div.col-sm-
+										<h4><a href="" class="goToCart">Перейти в корзину</a></h4>
 									</div>
 								</div>
 		          </div>

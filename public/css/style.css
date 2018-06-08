@@ -99,13 +99,15 @@ html, body {
 .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
   background: none; }
 
-.navbar-nav > li > a i {
-  color: white;
-  font-size: 35px; }
-  .navbar-nav > li > a i:hover {
-    color: #1B5E20; }
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-  background: none; }
+.navbar-nav > li > .cart-Logo {
+  padding: 12px 10px; }
+  .navbar-nav > li > .cart-Logo i {
+    color: white;
+    font-size: 35px; }
+    .navbar-nav > li > .cart-Logo i:hover {
+      color: #1B5E20; }
+  .navbar-nav > li > .cart-Logo:hover, .navbar-nav > li > .cart-Logo:focus {
+    background: none; }
 .navbar-nav > li .navbar-form {
   padding: 10px 15px;
   margin-top: 8px;
@@ -113,18 +115,36 @@ html, body {
   margin-bottom: 8px;
   margin-left: -15px; }
 .navbar-nav > li .dropdown-menu {
-  width: 230px;
+  box-shadow: 0 0 15px #757575;
+  width: 250px;
   padding: 0; }
   .navbar-nav > li .dropdown-menu .panel {
     border-radius: 0;
-    border: none; }
+    border: none;
+    margin: 0; }
     .navbar-nav > li .dropdown-menu .panel .cart-panel-footer {
-      position: absolute;
-      width: 100%;
       border-radius: 0;
-      bottom: 0;
       background-color: #7AB72B; }
+      .navbar-nav > li .dropdown-menu .panel .cart-panel-footer .goToCart {
+        text-decoration: none;
+        color: #fff;
+        position: relative;
+        left: 15%;
+        transform: translateX(-50%); }
+        .navbar-nav > li .dropdown-menu .panel .cart-panel-footer .goToCart:hover {
+          color: #1B5E20; }
+    .navbar-nav > li .dropdown-menu .panel .cart-panel-body {
+      padding: 20px; }
+      .navbar-nav > li .dropdown-menu .panel .cart-panel-body .count {
+        width: 50px; }
+      .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList {
+        padding: 0 10px; }
     .navbar-nav > li .dropdown-menu .panel .cart-panel-heading {
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.6px;
       background-color: #7AB72B;
       border-radius: 0; }
 .navbar-nav > li .dropdown:hover {

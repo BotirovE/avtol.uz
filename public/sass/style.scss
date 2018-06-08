@@ -125,7 +125,8 @@ html,body{
 }
 .navbar-nav{
   > li{
-    > a{
+    > .cart-Logo{
+      padding: 12px 10px;
       i{
         color: white;
         font-size: 35px;
@@ -145,19 +146,42 @@ html,body{
       margin-left: -15px;
     } 
     .dropdown-menu{
-      width: 230px;
+      box-shadow: 0 0 15px #757575;
+      width: 250px;
       padding: 0;
       .panel{
         border-radius: 0;
         border:none;
+        margin: 0;
         .cart-panel-footer{
-          position: absolute;
-          width: 100%;
           border-radius: 0;
-          bottom: 0;
           background-color: $color;
+          .goToCart{
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            left: 15%;
+            transform: translateX(-50%);
+            &:hover{
+              color: #1B5E20;
+            }
+          }
+        }
+        .cart-panel-body{
+          padding: 20px;
+          .count{
+            width: 50px;
+          }
+          .cartList{
+            padding: 0 10px;
+          }
         }
         .cart-panel-heading{
+          font-size: 16px;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 0.6px;
           background-color: $color;
           border-radius: 0;
         }

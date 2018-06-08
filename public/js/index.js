@@ -65,46 +65,43 @@ app.controller("carpetSortController", ["$scope", function ($carpet) {
 }]);
 
 
-app.controller('cart', function ($scope) {
+// app.controller('cart', function ($scope) {
     
-  $scope.cart = [];
+//   $scope.cart = [];
   
-  var findItemById = function(items, id) {
-    return find(items, function(item) {
-      return item.id === id;
-    });
-  };
+//   var findItemById = function(items, id) {
+//     return find(items, function(item) {
+//       return item.id === id;
+//     });
+//   };
   
-  $scope.getCost = function(item) {
-    return item.qty * item.price;
-  };
-
-  $scope.addItem = function(itemToAdd) {
-    var found = findItemById($scope.cart, itemToAdd.id);
-    if (found) {
-      found.qty += itemToAdd.qty;
-    }
-    else {
-      $scope.cart.push(angular.copy(itemToAdd));}
-  };
+//   $scope.addItem = function(itemToAdd) {
+//     var found = findItemById($scope.cart, itemToAdd.id);
+//     if (found) {
+//       found.qty += itemToAdd.qty;
+//     }
+//     else {
+//       $scope.cart.push(angular.copy(itemToAdd));}
+//   };
   
-  $scope.getTotal = function() {
-    var total =  reduce($scope.cart, function(sum, item) {
-      return sum + $scope.getCost(item);
-    }, 0);
-    console.log('total: ' + total);
-    return total;
-  };
+//   $scope.getTotal = function() {
+//     var total =  reduce($scope.cart, function(sum, item) {
+//       return sum + $scope.getCost(item);
+//     }, 0);
+//     console.log('total: ' + total);
+//     return total;
+//   };
   
-  $scope.clearCart = function() {
-    $scope.cart.length = 0;
-  };
+//   $scope.clearCart = function() {
+//     $scope.cart.length = 0;
+//   };
   
-  $scope.removeItem = function(item) {
-    var index = $scope.cart.indexOf(item);
-    $scope.cart.splice(index, 1);
-  };
-});
+//   $scope.removeItem = function(item) {
+//     var index = $scope.cart.indexOf(item);
+//     $scope.cart.splice(index, 1);
+//   };
+//   $scope.total -= parseFloat(item.price);
+// });
 
 app.controller('cart', function ($scope) {
   
@@ -122,18 +119,8 @@ app.controller('cart', function ($scope) {
     }
   }
   loadCart();
-  
-  var findItemById = function(items, id) {
-    return find(items, function(item) {
-      return item.id === id;
-    });
-  };
-  
-  $scope.getCost = function(item) {
-    return item.qty * item.price;
-  };
 
-  $scope.count = 0;
+  // $scope.count = 0;
   $scope.addItem = function (product) {
     if ($scope.cart.length === 0){
 		 		product.count = 1;
@@ -154,24 +141,17 @@ app.controller('cart', function ($scope) {
 		 	$scope.total += parseFloat(product.price);
       saveCart();
     };
-
-
-  // $scope.getTotal = function() {
-  //   var total =  reduce($scope.cart, function(sum, item) {
-  //     return sum + $scope.getCost(item);
-  //   }, 0);
-  //   console.log('total: ' + total);
-  //   return total;
-  // };
   
   $scope.clearCart = function() {
     $scope.cart.length = 0;
+    $scope.total = 0;
     saveCart();
   };
   
   $scope.removeItem = function(item) {
     var index = $scope.cart.indexOf(item);
     $scope.cart.splice(index, 1);
+  	$scope.total -= parseFloat(item.price);
   	saveCart();
   };
 });
