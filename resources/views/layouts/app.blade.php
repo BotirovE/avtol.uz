@@ -19,7 +19,11 @@
   
 </head>
 <body ng-controller="cart">
-  <script type="text/javascript" src="{{ asset('js/data.json') }}"></script>
+  <script type="text/javascript">
+    var accum = @json($accum).data;
+    var accumBrand = @json($accumBrand);
+    var carBrand = @json($carBrand);
+  </script>
   <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
   <div id="app">
     <div class="container-fluid">

@@ -19,11 +19,11 @@ app.controller("tyresSortController", ["$scope", function ($tyres) {
 app.controller("accumSortController", ["$scope", function ($accum) {
   $accum.accum = accum;
   // define list of items
-  $accum.accumBrand = ["Atlant","Energy","hoppenergy","Daz","KUCH"];
+  $accum.accumBrand = accumBrand;
   $accum.accumName = ["6CT-35","6CT-50","6CT-66","6CT-55","6CT-150"];
   $accum.accumCapacity = ["35","50","66","55","150"];
   $accum.accumSize = ["199x131x227","200x170x190","277x175x190","242x175x190","515x191x239"];
-  $accum.accumAvto = ["matiz","spark","volga","neksiya","zil"];
+  $accum.accumAvto = carBrand;
 
   $accum.accumFilter = {};
   // reset the filter

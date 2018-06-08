@@ -39,7 +39,7 @@ class Brand extends Model
     /**
      * Get all of the accumulators that are assigned this brand.
      */
-    public function accumulators()
+    public function accums()
     {
         return $this->morphedByMany('App\Accumulator', 'brandable');
     }

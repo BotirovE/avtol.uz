@@ -18,9 +18,9 @@ Route::get('/', function () {
 Route::get('/carpet', function () {
     return view('carpet');
 })->name('carpet');
-Route::get('/accum', function () {
-    return view('accum');
-})->name('accum');
+// Route::get('/accum', function () {
+//     return view('accum');
+// })->name('accum');
 Route::get('/tyres', function () {
     return view('tyres');
 })->name('tyres');
@@ -31,6 +31,10 @@ Route::get('/rims', function () {
 Route::get('/product', function () {
     return view('individual');
 })->name('product');
+
+Route::get('/basket', function () {
+    return view('basket');
+})->name('basket');
 
 Auth::routes();
 
@@ -60,3 +64,4 @@ Route::namespace('Admin')->middleware(['auth:admin'])->prefix('admin')->name('ad
     ]);
 });
 
+Route::get('/accum', 'PagesController@accum')->name('accum');
