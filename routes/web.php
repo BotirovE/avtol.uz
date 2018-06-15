@@ -36,6 +36,10 @@ Route::get('/basket', function () {
     return view('basket');
 })->name('basket');
 
+Route::get('/checkout', function () {
+    return view('checkout');
+})->name('checkout');
+
 Auth::routes();
 
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -64,4 +68,6 @@ Route::namespace('Admin')->middleware(['auth:admin'])->prefix('admin')->name('ad
     ]);
 });
 
-Route::get('/accum', 'PagesController@accum')->name('accum');
+Route::get('/accums', 'PagesController@accum')->name('accums');
+Route::get('/tyre', 'PagesController@tyre')->name('tyres');
+

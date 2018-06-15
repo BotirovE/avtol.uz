@@ -1,5 +1,11 @@
 @extends('layouts.app')
-
+@section('scripts')
+	<script type="text/javascript">
+    var accum = @json($accum).data;
+    var accumBrand = @json($accumBrand);
+    var carBrand = @json($carBrand);
+  </script>
+@endsection
 @section('content')
 	<div class="container" ng-controller="accumSortController">
 		<h2>Аккумуляторы</h2>
