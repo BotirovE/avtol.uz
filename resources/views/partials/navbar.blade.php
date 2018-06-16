@@ -84,20 +84,40 @@
 									<div class="panel-body cart-panel-body">
 							      <ul class="cartList">
 							        <li class="animate-repeat" ng-repeat="item in cart">
-							          <div><span>@{{ item.count + ' x ' + item.brand + ' = ' + getCost(item) }}</span></div>
-							      		<div><input type="number" ng-model="item.count" class="count"></div>
-							          <button class="btn btn-danger btn-xs" ng-click="removeItem(item);">Remove Item</button>
+							        	<h4>@{{ item.brand }}</h4>
+							        	<ul class="nav navbar-nav">
+							        		<li>
+									      		<div class="itemCount">
+									      			<button class="btn-sm" id="addItem" ng-click="addItem(item);">
+									      				<i class="fas fa-plus-circle"></i>
+										      		</button>
+									      			<input type="number" readonly ng-model="item.count" class="count" />
+										      		<button class="btn-sm" id="removeItemCount" ng-click="removeItemCart(item);">
+										      			<i class="fas fa-minus-circle"></i>
+										      		</button>
+														</div>
+							        		</li>
+							        		<li>
+								      			<p>@{{ ' = ' + getCost(item) }}</p>
+							        		</li>
+							        		<li>
+									          <button class="btn btn-danger btn-xs" ng-click="removeItem(item);">
+									          	<i class="far fa-trash-alt"></i>
+									          </button>
+							        		</li>
+										    </ul>
 							        </li>
 							      </ul>
+							      <br>
 							      <hr>
-							      <h4>Total: @{{ total }}</h4>
-							      <button class="btn btn-danger btn-xs" ng-click="clearCart();">Clear Cart</button>
+							      <h4>Итого: @{{ getTotal() | filter: nospace}}</h4>
 									</div>
 									<div class="panel-footer cart-panel-footer">
-										<h4><a href="" class="goToCart">Перейти в корзину</a></h4>
+										<h4><a href="{{ route('basket') }}" class="goToCart">Перейти в корзину</a></h4>
 									</div>
 								</div>
 		          </div>
+		          <span id="counter" ng-repeat="item in cart">@{{ countCart() }}</span>
 		        </li>
 		      </ul>
 		    </div>

@@ -64,45 +64,6 @@ app.controller("carpetSortController", ["$scope", function ($carpet) {
   }
 }]);
 
-
-// app.controller('cart', function ($scope) {
-    
-//   $scope.cart = [];
-  
-//   var findItemById = function(items, id) {
-//     return find(items, function(item) {
-//       return item.id === id;
-//     });
-//   };
-  
-//   $scope.addItem = function(itemToAdd) {
-//     var found = findItemById($scope.cart, itemToAdd.id);
-//     if (found) {
-//       found.qty += itemToAdd.qty;
-//     }
-//     else {
-//       $scope.cart.push(angular.copy(itemToAdd));}
-//   };
-  
-//   $scope.getTotal = function() {
-//     var total =  reduce($scope.cart, function(sum, item) {
-//       return sum + $scope.getCost(item);
-//     }, 0);
-//     console.log('total: ' + total);
-//     return total;
-//   };
-  
-//   $scope.clearCart = function() {
-//     $scope.cart.length = 0;
-//   };
-  
-//   $scope.removeItem = function(item) {
-//     var index = $scope.cart.indexOf(item);
-//     $scope.cart.splice(index, 1);
-//   };
-//   $scope.total -= parseFloat(item.price);
-// });
-
 app.controller('cart', function ($scope) {
   
   $scope.cart = [];
@@ -120,52 +81,87 @@ app.controller('cart', function ($scope) {
   }
   loadCart();
 
-  // $scope.count = 0;
+  $scope.counter = 0;
+	$scope.countCart = function () { // -> return total count
+    var totalCount = 0;
+    for (var i in $scope.cart) {
+        totalCount += $scope.cart[i].count;
+    }
+    totalCount;
+    $('#counter').innerHTML = totalCount;
+  };
+
+  $scope.getCost = function(item) {
+    return item.count * item.price;
+  };
+
   $scope.addItem = function (product) {
     if ($scope.cart.length === 0){
-		 		product.count = 1;
-		 		$scope.cart.push(product);
-		 	} else {
-		 		var repeat = false;
-		 		for(var i = 0; i< $scope.cart.length; i++){
-		 			if($scope.cart[i].id === product.id){
-		 				repeat = true;
-		 				$scope.cart[i].count +=1;
-		 			}
-		 		}
-		 		if (!repeat) {
-		 			product.count = 1;
-		 		 	$scope.cart.push(product);	
-		 		}
-		 	}
-		 	$scope.total += parseFloat(product.price);
-      saveCart();
-    };
+	 		product.count = 1;
+	 		$scope.cart.push(product);
+	 	} else {
+	 		var repeat = false;
+	 		for(var i = 0; i< $scope.cart.length; i++){
+	 			if($scope.cart[i].id === product.id){
+	 				repeat = true;
+	 				$scope.cart[i].count +=1;
+	 			}
+	 		}
+	 		if (!repeat) {
+	 			product.count = 1;
+	 		 	$scope.cart.push(product);	
+	 		}
+	 	}
+    saveCart();
+  };
   
+  $scope.getTotal = function() {
+    var total = 0;
+    angular.forEach($scope.cart, function(item) {
+      total += item.price * item.count;
+    })
+    return total;
+    saveCart();
+  }
+  app.filter('nospace', function () {
+    return function (value) {
+      return (!value) ? '' : value.replace(/ /g, '');
+    };
+	});
+
   $scope.clearCart = function() {
     $scope.cart.length = 0;
     $scope.total = 0;
     saveCart();
   };
   
+	$scope.removeItemCart = function(product){
+	  if(product.count > 1){
+	    product.count -= 1;
+	  }
+	  else if(product.count === 1){
+	    var index = $scope.cart.indexOf(product);
+			$scope.cart.splice(index, 1);
+	  }
+	  saveCart();
+  };
+
   $scope.removeItem = function(item) {
     var index = $scope.cart.indexOf(item);
     $scope.cart.splice(index, 1);
-  	$scope.total -= parseFloat(item.price);
+  	$scope.total = $scope.total - (item.price * item.count);
   	saveCart();
   };
 });
 
 $(function(){
 $(".dropdown").hover(            
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
-            $(this).toggleClass('open');
-            $('b', this).toggleClass("caret caret-up");                
-        },
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
-            $(this).toggleClass('open');
-            $('b', this).toggleClass("caret caret-up");                
-        });
+  function() {
+      $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+      $(this).toggleClass('open');
+  },
+  function() {
+      $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+      $(this).toggleClass('open');
+  });
 });

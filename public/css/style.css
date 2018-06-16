@@ -100,7 +100,7 @@ html, body {
   background: none; }
 
 .navbar-nav > li > .cart-Logo {
-  padding: 12px 10px; }
+  padding: 17px 10px; }
   .navbar-nav > li > .cart-Logo i {
     color: white;
     font-size: 35px; }
@@ -116,7 +116,7 @@ html, body {
   margin-left: -15px; }
 .navbar-nav > li .dropdown-menu {
   box-shadow: 0 0 15px #757575;
-  width: 250px;
+  width: 290px;
   padding: 0; }
   .navbar-nav > li .dropdown-menu .panel {
     border-radius: 0;
@@ -134,11 +134,32 @@ html, body {
         .navbar-nav > li .dropdown-menu .panel .cart-panel-footer .goToCart:hover {
           color: #1B5E20; }
     .navbar-nav > li .dropdown-menu .panel .cart-panel-body {
-      padding: 20px; }
-      .navbar-nav > li .dropdown-menu .panel .cart-panel-body .count {
-        width: 50px; }
+      padding: 20px 10px; }
       .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList {
-        padding: 0 10px; }
+        padding: 0 10px;
+        list-style: none; }
+        .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList p {
+          margin: 1px 8px;
+          font-size: 16px; }
+        .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList .itemCount {
+          display: grid;
+          width: 115px;
+          grid-template-columns: 30px 55px 30px; }
+          .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList .itemCount button, .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList .itemCount input {
+            border: none;
+            background: none;
+            font-size: 18px;
+            padding: 0; }
+          .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList .itemCount #addItem {
+            color: #7AB72B;
+            grid-column: 1; }
+          .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList .itemCount .count {
+            text-align: center;
+            padding: 0 0 0 5px;
+            grid-column: 2; }
+          .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList .itemCount #removeItemCount {
+            color: #7AB72B;
+            grid-column: 3; }
     .navbar-nav > li .dropdown-menu .panel .cart-panel-heading {
       font-size: 16px;
       color: #fff;
@@ -416,6 +437,50 @@ a.right {
     background-repeat: no-repeat;
     transition: all 0.4s;
     z-index: 1; }
+
+.cartMain, .cartSide {
+  border: 1px solid #bbb;
+  padding: 10px;
+  box-shadow: 0 0 10px #757575; }
+  .cartMain .cartImage, .cartSide .cartImage {
+    width: 70px;
+    margin-right: 10px; }
+  .cartMain span, .cartSide span {
+    font-size: 18px; }
+  .cartMain .removeItem, .cartSide .removeItem {
+    margin: 20px 0; }
+  .cartMain h4, .cartSide h4 {
+    margin: 20px 0; }
+  .cartMain .cartCount, .cartSide .cartCount {
+    margin: 5px 0;
+    display: grid;
+    font-size: 16px;
+    grid-template-columns: 35px 60px 35px; }
+    .cartMain .cartCount button, .cartSide .cartCount button {
+      outline: none;
+      border: none;
+      background: none;
+      font-size: 22px;
+      color: #7AB72B; }
+    .cartMain .cartCount input, .cartSide .cartCount input {
+      height: 30px;
+      margin: 10px 0;
+      border: 1px solid #bbb;
+      text-align: center;
+      padding: 0 5px;
+      border-radius: 5px; }
+    .cartMain .cartCount #addItem, .cartSide .cartCount #addItem {
+      grid-column: 1; }
+    .cartMain .cartCount .count, .cartSide .cartCount .count {
+      grid-column: 2; }
+    .cartMain .cartCount #removeItemCount, .cartSide .cartCount #removeItemCount {
+      grid-column: 3; }
+  .cartMain .btn-sm, .cartSide .btn-sm {
+    width: 100%;
+    margin: 5px 0; }
+
+hr {
+  border-color: #7AB72B; }
 
 .main-items {
   width: 100%;
