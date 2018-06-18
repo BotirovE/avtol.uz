@@ -18,9 +18,9 @@ Route::get('/', function () {
 Route::get('/carpet', function () {
     return view('carpet');
 })->name('carpet');
-// Route::get('/accum', function () {
-//     return view('accum');
-// })->name('accum');
+Route::get('/accum', function () {
+    return view('accum');
+})->name('accum');
 Route::get('/tyres', function () {
     return view('tyres');
 })->name('tyres');
