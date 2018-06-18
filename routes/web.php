@@ -68,6 +68,5 @@ Route::namespace('Admin')->middleware(['auth:admin'])->prefix('admin')->name('ad
     ]);
 });
 
-Route::get('/accums', 'PagesController@accum')->name('accums');
-Route::get('/tyre', 'PagesController@tyre')->name('tyres');
+Route::get('/accums', 'PagesController@accums')->name('accums');
 
