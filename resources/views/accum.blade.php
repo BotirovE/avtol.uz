@@ -44,7 +44,7 @@
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						<br>
-            <input type="reset" ng-click="resetFilter()" class="btn btn-primary">
+            <input type="reset" ng-click="resetFilter()" class="btn btn-primary" value="Сброс">
             </div>
 					</form>
 				</div>
@@ -69,7 +69,7 @@
 									<div class="col-md-4">
 										<h4>@{{ accum.price + ' sum' }}</h4>
 										<h4><a href="">подробно...</a></h4>
-										<button class="btn-primary" ng-click="addItem(accum)">Add to Cart</button>
+										<button class="btn-primary" ng-click="addItem(accum)">Добавить в корзину</button>
 									</div>
 								</div>
 							</div>

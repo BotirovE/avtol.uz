@@ -38,7 +38,7 @@
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						<br>
-            <input type="reset" ng-click="resetFilter()" class="btn btn-primary">
+            <input type="reset" ng-click="resetFilter()" class="btn btn-primary" value="Сброс">
             </div>
 					</form>
 				</div>
@@ -63,7 +63,7 @@
 									<div class="col-md-4">
 										<h4>@{{ tyre.price + ' sum' }}</h4>
 										<h4><a ui-sref="product.detail({tyre: id})" href="{{ route('product') }}">подробно...</a></h4>
-										<button class="btn btn-primary" id="addItem" ng-click="addItem(tyre);countCart()">Add to Cart</button>
+										<button class="btn btn-primary" id="addItem" ng-click="addItem(tyre);countCart()">Добавить в корзину</button>
 									</div>
 								</div>
 							</div>

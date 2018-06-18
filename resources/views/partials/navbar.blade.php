@@ -77,7 +77,9 @@
 				  </form>
 		        </li>
 		        <li class="dropdown">
-		        	<div class="dropdown-toggle cart-Logo" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i></div>
+		        	<div class="dropdown-toggle cart-Logo" data-toggle="dropdown">
+		        		<i class="fas fa-shopping-cart"></i>
+		        	</div>
 		          <div class="dropdown-menu">
 								<div class="panel">
 									<div class="panel-heading cart-panel-heading">Корзина</div>
