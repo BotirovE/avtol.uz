@@ -21,7 +21,7 @@
 	  			<h3>Категории</h3>
 	  			<ul class="footerCategory">
 	  				<li><a href="{{route('tyres')}}">Шины</a></li>
-	  				<li><a href="{{route('accum')}}">Аккумулятор</a></li>
+	  				<li><a href="{{route('accums')}}">Аккумулятор</a></li>
 	  				<li><a href="{{route('rims')}}">Диски</a></li>
 	  				<li><a href="{{route('carpet')}}">Коврик</a></li>
 	  				<li><a href="">О нас</a></li>

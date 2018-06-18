@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('scripts')
 	<script type="text/javascript">
-    var accum = @json($accum).data;
-    var accumBrand = @json($accumBrand);
-    var carBrand = @json($carBrand);
+    var accum = @json($accums).data;
+    var accumBrand = @json($brand);
+    var carBrand = @json($car);
   </script>
 @endsection
 @section('content')

@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('orderable_type',20);
             $table->integer('orderable_id')->unsigned();
             $table->string('delivery_type',20);
+            $table->string('phone',15);
             $table->timestamps();
         });
     }

@@ -21,7 +21,7 @@
 					  <div class="panel panel-default">
 				      <div class="panel-heading" role="tab" id="headingOne">
 				       	<h4 class="panel-title">
-				       	  <a class="collapsed" href="{{route('accum')}}">Аккумулятор</a>
+				       	  <a class="collapsed" href="{{route('accums')}}">Аккумулятор</a>
 				      	</h4>
 				      </div>
 					  </div>
