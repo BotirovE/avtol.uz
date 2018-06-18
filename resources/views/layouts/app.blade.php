@@ -19,16 +19,8 @@
   
 </head>
 <body ng-controller="cart">
-<<<<<<< HEAD
   @yield('scripts');
-=======
- {{--  <script type="text/javascript">
-    var accum = @json($accum).data;
-    var accumBrand = @json($accumBrand);
-    var carBrand = @json($carBrand);
-  </script> --}}
   <script type="text/javascript" src="{{ asset('js/data.json') }}"></script>
->>>>>>> 24edf9fa7afd30a9553ce59be02209404b915e3e
   <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
   <div id="app">
     <div class="container-fluid">
