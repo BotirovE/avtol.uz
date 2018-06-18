@@ -20,7 +20,7 @@
 </head>
 <body ng-controller="cart">
   <script type="text/javascript" src="{{ asset('js/data.json') }}"></script>
-  @yield('scripts');
+  @yield('scripts')
   <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
   <div id="app">
     <div class="container-fluid">
@@ -31,6 +31,5 @@
       </div>
     </div>
   </div>
-<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
