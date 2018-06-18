@@ -19,8 +19,8 @@
   
 </head>
 <body ng-controller="cart">
-  @yield('scripts');
   <script type="text/javascript" src="{{ asset('js/data.json') }}"></script>
+  @yield('scripts');
   <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
   <div id="app">
     <div class="container-fluid">
