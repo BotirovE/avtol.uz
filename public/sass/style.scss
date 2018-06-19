@@ -217,8 +217,25 @@ html,body{
       &:hover{
         background: none;
       }
-
     }
+  }
+}
+.cartCounter{
+  position: absolute;
+  top: 8px;
+  right: -6px;
+  height: 25px;
+  width: 25px;
+  background: #1E88E5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #fff;
+  padding: 2px 0;
+  p{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .navbar-brand {

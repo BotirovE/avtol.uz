@@ -69,7 +69,7 @@
 									<div class="col-md-4">
 										<h4>@{{ accum.price + ' sum' }}</h4>
 										<h4><a href="">подробно...</a></h4>
-										<button class="btn-primary" ng-click="addItem(accum)">Добавить в корзину</button>
+										<button class="btn btn-primary" ng-click="addItem(accum)">Добавить в корзину</button>
 									</div>
 								</div>
 							</div>

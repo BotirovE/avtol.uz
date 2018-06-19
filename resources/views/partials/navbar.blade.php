@@ -79,6 +79,7 @@
 		        <li class="dropdown">
 		        	<div class="dropdown-toggle cart-Logo" data-toggle="dropdown">
 		        		<i class="fas fa-shopping-cart"></i>
+		        		<span class="cartCounter"><p>@{{ counter() }}</p></span>
 		        	</div>
 		          <div class="dropdown-menu">
 								<div class="panel">

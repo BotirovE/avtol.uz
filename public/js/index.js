@@ -81,7 +81,6 @@ app.controller('cart', function ($scope) {
   }
   loadCart();
 
-  $scope.counter = 0;
 	$scope.countCart = function () { // -> return total count
     var totalCount = 0;
     for (var i in $scope.cart) {
@@ -115,6 +114,14 @@ app.controller('cart', function ($scope) {
     saveCart();
   };
   
+  $scope.counter = function(){
+  	var counter = 0;
+    angular.forEach($scope.cart, function(item) {
+      counter += item.count;
+    })
+    return counter;
+  	saveCart();
+  }
   $scope.getTotal = function() {
     var total = 0;
     angular.forEach($scope.cart, function(item) {
