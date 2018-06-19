@@ -100,8 +100,7 @@
 					  <li data-target="#myCarousel" data-slide-to="3"></li>
 					</ol>
 				    <!-- Wrapper for slides -->
-					<div class="carousel-inner mainCarousel">
-					  <div class="overlay"></div>
+					<div class="carousel-inner mainCarousel" id="mainCarousel">
 					  <div class="item active">
 					    <img src="{{ asset('img/slider/sample-1.jpg') }}" alt="slider">
 					    <div class="carousel-caption">
@@ -141,6 +140,7 @@
 					  <span class="sr-only">Next</span>
 					</a>
 			  </div>
+			  <br>
 			  <br>
 			  <div class="row centerBlock">
 			  	<div class="col-md-3">
@@ -240,6 +240,45 @@
 			</div>
 	  </div><br>
 	  <div class="container">
+	  	<div class="row">
+			  <div class="offerGuide">
+			  	<section class="rubric p-b-30 bg-white">
+						<div class="container">
+			  			<h4>КАК СДЕЛАТЬ ЗАКАЗ?</h4>
+							<div class="row">
+								<div class="col-md-3 col-md-3">
+									<i class="fas fa-hand-point-up rubric__iconrubric"></i>
+									<div class="rubric__infoblock">
+										<h3 class="rubric__title">Шаг 1</h3>
+										<p class="rubric__info">Выберите товар в каталоге или воспользуйтесь поиском.</p>
+									</div>
+								</div>
+								<div class="col-md-3 col-md-3">
+									<i class="fas fa-shopping-cart rubric__iconrubric"></i>
+									<div class="rubric__infoblock">
+										<h3 class="rubric__title">Шаг 2</h3>
+										<p class="rubric__info">Положите товар в корзину, нажав кнопку "В корзину".</p>
+									</div>
+								</div>
+								<div class="col-md-3 col-md-3">
+									<i class="fas fa-file-alt rubric__iconrubric"></i>
+									<div class="rubric__infoblock">
+										<h3 class="rubric__title">Шаг 3</h3>
+										<p class="rubric__info">Оформите заказ: укажите желаемое количество товара.</p>
+									</div>
+								</div>
+								<div class="col-md-3 col-md-3">
+									<i class="fas fa-truck rubric__iconrubric"></i>
+									<div class="rubric__infoblock">
+										<h3 class="rubric__title">Шаг 4</h3>
+										<p class="rubric__info">Получите товар по любому удобному адресу.</p>
+									</div>
+								</div>
+							</div>
+						</div>	<!-- end of container -->
+					</section>
+			  </div>
+			</div>
 		  <div class="row">
 		  	<div class="recommended">
 		  		<h2>Новые добавленные</h2>

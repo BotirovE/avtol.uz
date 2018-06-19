@@ -187,17 +187,46 @@ html, body {
   .navbar-toggle .icon-bar {
     border: 1px solid white; }
 
-.navbar-toggle
-.mainCarousel > .item > img,
-.mainCarousel > .item > a > img {
+#mainCarousel > .item > img,
+#mainCarousel > .item > a > img {
   display: block;
   width: 100%;
-  height: 380px;
+  height: 380px !important;
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
   filter: blur(3px); }
+
+.offerGuide {
+  background: #fff;
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 4px;
+  /*  .fa-hand-point-up,.fa-file-alt{
+      font-size: 32px!important;
+      padding: 7px 12px!important;
+    }*/ }
+  .offerGuide h3 {
+    margin: 0; }
+  .offerGuide .rubric__infoblock {
+    width: 195px;
+    display: inline; }
+  .offerGuide .fa-shopping-cart, .offerGuide .fa-truck {
+    font-size: 30px !important;
+    padding: 10px 8px !important; }
+  .offerGuide .rubric__iconrubric {
+    font-size: 33px;
+    color: #7AB72B;
+    border: 3px solid #7AB72B;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    padding: 7px 13px;
+    margin-right: 10px;
+    float: left;
+    width: 56px;
+    height: 56px; }
 
 /* ------------------- Carousel Styling ------------------- */
 .carousel-inner {
