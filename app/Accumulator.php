@@ -12,13 +12,20 @@ class Accumulator extends Model
      * @var array
      */
     protected $guarded = ['image','brands'];
+     
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = ['created_at', 'updated_at', 'pivot'];
     
     /**
      * Get all of the accumulator's orders.
      */
     public function orders()
     {
-        return $this->morphMany('App\Order', 'orderable');
+        return $this->morphToMany('App\Order', 'orderable');
     }
 
     /**
@@ -28,4 +35,23 @@ class Accumulator extends Model
     {
         return $this->morphToMany('App\Brand', 'brandable');
     }
+
+    /**
+     * Get brand of the accumulator.
+     */
+    public function brand()
+    {
+
+        return $this->brands()->where('isCar',0);
+    }
+
+    /**
+     * Get brand of the car that is accumulator for.
+     */
+    public function car()
+    {
+
+        return $this->brands()->where('isCar',1);
+    }
+
 }

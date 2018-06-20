@@ -26,9 +26,9 @@ class PagesController extends Controller
      */
     public function accums()
     {
-        $brand = Brand::has('accums')->pluck('name');
+        $brand = Brand::has('accums')->where('isCar',0)->pluck('name');
         $car = Brand::where('isCar', 1)->pluck('name');
-        $accums = Accumulator::with('brands')->paginate(10);
+        $accums = Accumulator::with('brand')->with('car')->paginate(10);
         return view('accum')->with('car', $car)
                             ->with('brand', $brand)
                             ->with('accums', $accums);

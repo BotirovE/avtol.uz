@@ -26,7 +26,7 @@ class CreateTransactionsTable extends Migration
             $table->tinyInteger('reason');
             $table->string('receivers',500)->nullable()->comment('JSON array of receivers');
             $table->integer('order_id');
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

@@ -12,13 +12,20 @@ class Tyre extends Model
      * @var array
      */
     protected $guarded = ['brands'];
+         
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = ['created_at', 'updated_at', 'pivot'];
     
     /**
      * Get all of the tyre's orders.
      */
     public function orders()
     {
-        return $this->morphMany('App\Order', 'orderable');
+        return $this->morphToMany('App\Order', 'orderable');
     }
 
     /**
