@@ -89,7 +89,7 @@ app.controller('cart', function ($scope) {
     totalCount;
     $('#counter').innerHTML = totalCount;
   };
-
+	
   $scope.getCost = function(item) {
     return item.count * item.price;
   };
@@ -172,3 +172,85 @@ $(".dropdown").hover(
       $(this).toggleClass('open');
   });
 });
+
+
+// ==================================================
+// 
+// jquery-input-mask-phone-number v1.0
+//
+// ==================================================
+
+(function ($) {
+  $.fn.usPhoneFormat = function (options) {
+    var params = $.extend({
+      format: 'xx-xxx-xxxx',
+      international: false,
+  	}, options);
+
+  	if (params.format === 'xx-xxx-xxxx') {
+      $(this).bind('paste', function (e) {
+        e.preventDefault();
+        var inputValue = e.originalEvent.clipboardData.getData('Text');
+        if (!$.isNumeric(inputValue)) {
+          return false;
+        } else {
+          inputValue = String(inputValue.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3"));
+          $(this).val(inputValue);
+          $(this).val('');
+          inputValue = inputValue.substring(0, 12);
+          $(this).val(inputValue);
+        }
+      });
+      $(this).on('keypress', function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+          return false;
+        }
+          var curchr = this.value.length;
+          var curval = $(this).val();
+          if (curchr == 2) {
+            $(this).val(curval + "-");
+          } else if (curchr == 7) {
+            $(this).val(curval + "-");
+          }
+          $(this).attr('maxlength', '12');
+      });
+
+  	} else if (params.format === '(xx) xxx-xxxx') {
+      $(this).on('keypress', function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+          return false;
+        }
+        var curchr = this.value.length;
+        var curval = $(this).val();
+        if (curchr == 2) {
+          $(this).val('+998(' + curval + ')' + " ");
+        } else if (curchr == 12) {
+          $(this).val(curval + "-");
+        } else if(curchr == 15){
+      		$(this).val(curval + "-");
+        }
+        $(this).attr('maxlength', '18');
+      });
+      $(this).bind('paste', function (e) {
+        e.preventDefault();
+        var inputValue = e.originalEvent.clipboardData.getData('Text');
+        if (!$.isNumeric(inputValue)) {
+          return false;
+        } else {
+          inputValue = String(inputValue.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3"));
+          $(this).val(inputValue);
+          $(this).val('');
+          inputValue = inputValue.substring(0, 14);
+          $(this).val(inputValue);
+        }
+      });
+    }
+  }
+}(jQuery));
+
+$(document).ready(function() {
+  $('.method').on('click', function() {
+    $('.method').removeClass('active');
+    $(this).addClass('active');
+  });
+})

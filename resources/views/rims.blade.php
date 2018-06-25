@@ -63,7 +63,7 @@
 									<div class="col-md-4">
 										<h4>@{{ rims.price + ' sum' }}</h4>
 										<h4><a href="">подробно...</a></h4>
-										<button class="btn btn-primary btn-sm" ng-click="addItem(rims)">Добавить в корзину</button>
+										<button class="btn btn-primary btn-sm" ng-click="addItem(rims);">Добавить в корзину</button>
 									</div>
 								</div>
 							</div>

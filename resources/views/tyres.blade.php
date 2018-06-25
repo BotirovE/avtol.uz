@@ -63,7 +63,7 @@
 									<div class="col-md-4">
 										<h4>@{{ tyre.price + ' sum' }}</h4>
 										<h4><a ui-sref="product.detail({tyre: id})" href="{{ route('product') }}">подробно...</a></h4>
-										<button class="btn btn-primary" id="addItem" ng-click="addItem(tyre);countCart()">Добавить в корзину</button>
+										<button class="btn btn-primary" id="addItem" ng-click="addItem(tyre);">Добавить в корзину</button>
 									</div>
 								</div>
 							</div>

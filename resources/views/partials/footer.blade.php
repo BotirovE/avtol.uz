@@ -11,7 +11,7 @@
 	  		<div class="col-md-4">
 	  			<div class="footerContantBlock">
 		  			<h3>Контакты</h3>
-		  			<p><i class="fas fa-map-marker"></i> Tashkent, Uzbekistan</p>
+		  			<p><i class="fas fa-map-marker-alt"></i> Tashkent, Uzbekistan</p>
 		  			<p><i class="fas fa-phone"></i> +998XX-XXX-XX-XX</p>
 		  			<p><i class="fa fa-fax"></i> +998XX-XXX-XX-XX</p>
 		  			<p><i class="far fa-envelope"></i> info@mail.uz</p>
