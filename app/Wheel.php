@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Wheel extends Model
 {
@@ -18,7 +19,7 @@ class Wheel extends Model
      *
      * @var array
      */
-    protected $hidden = ['created_at', 'updated_at', 'pivot'];
+    protected $hidden = ['created_at', 'updated_at', 'pivot', 'brands'];
     
     /**
      * Get all of the wheel's orders.
@@ -35,4 +36,31 @@ class Wheel extends Model
     {
         return $this->morphToMany('App\Brand', 'brandable');
     }
+
+    /**
+     * Get the brand of the wheel.
+     *
+     * @return string
+     */
+    public function getBrandAttribute()
+    {
+        return $this->brands->where('isCar',0)->first()->name;
+    }
+
+    /**
+     * Get the image_path of the accumulator.
+     *
+     * @return string
+     */
+    public function getImageAttribute()
+    {
+        return Storage::exists('public/images/wheels/' . $this->id) ? asset('storage/images/wheels/' . $this->id) : asset('storage/images/wheels/default.jpg');
+    }
+
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = ['brand', 'image'];
 }

@@ -3,9 +3,9 @@ var tyres = [
     "id":1,
     "brand":"Pirelli",
     "qty": 1,
-    "type":"Легковые шины",
+    "category":"Легковые шины",
     "season":"Летные шины",
-    "diametr":"14",
+    "diameter":"14",
     "size":"145/65",
     "price":"565000"
   },
@@ -13,9 +13,9 @@ var tyres = [
     "id":2,
     "qty": 1,
     "brand":"Pirelli",
-    "type":"Легко-грузовые шины",
+    "category":"Легко-грузовые шины",
     "season":"Зимные шины",
-    "diametr":"19",
+    "diameter":"19",
     "price":"665000",
     "size":"135/80"
   },
@@ -23,9 +23,9 @@ var tyres = [
     "id":3,
     "qty": 1,
     "brand":"Cooper",
-    "type":"Грузовые шины",
+    "category":"Грузовые шины",
     "season":"Всесезонные шины",
-    "diametr":"17",
+    "diameter":"17",
     "size":"145/70",
     "price":"405000"
   },
@@ -33,9 +33,9 @@ var tyres = [
     "id":4,
     "qty": 1,
     "brand":"Hankook",
-    "type":"Сельскохозяйственные шины",
+    "category":"Сельскохозяйственные шины",
     "season":"Всесезонные шины",
-    "diametr":"15",
+    "diameter":"15",
     "size":"155/60",
     "price":"652000"
   },
@@ -43,9 +43,9 @@ var tyres = [
     "id":5,
     "qty": 1,
     "brand":"Dunlop",
-    "type":"Шины для спец техники",
+    "category":"Шины для спец техники",
     "season":"Зимные шины",
-    "diametr":"12",
+    "diameter":"12",
     "size":"165/80",
     "price":"706000"
   },
@@ -53,9 +53,9 @@ var tyres = [
     "id":6,
     "qty": 1,
     "brand":"Pirelli",
-    "type":"Легковые шины",
+    "category":"Легковые шины",
     "season":"Летные шины",
-    "diametr":"13",
+    "diameter":"13",
     "size":"135/80",
     "price":"563000"
   },
@@ -63,9 +63,9 @@ var tyres = [
     "id":7,
     "qty": 1,
     "brand":"Dunlop",
-    "type":"Легко-грузовые шины",
+    "category":"Легко-грузовые шины",
     "season":"Зимные шины",
-    "diametr":"19",
+    "diameter":"19",
     "size":"185",
     "price":"466000"
   },
@@ -73,9 +73,9 @@ var tyres = [
     "id":8,
     "qty": 1,
     "brand":"Cooper",
-    "type":"Грузовые шины",
+    "category":"Грузовые шины",
     "season":"Всесезонные шины",
-    "diametr":"17",
+    "diameter":"17",
     "size":"145/70",
     "price":"666000"
   },
@@ -83,9 +83,9 @@ var tyres = [
     "id":9,
     "qty": 1,
     "brand":"Hankook",
-    "type":"Сельскохозяйственные шины",
+    "category":"Сельскохозяйственные шины",
     "season":"Всесезонные шины",
-    "diametr":"15",
+    "diameter":"15",
     "size":"155/60",
     "price":"650000"
   },
@@ -93,9 +93,9 @@ var tyres = [
     "id":10,
     "qty": 1,
     "brand":"Dunlop",
-    "type":"Шины для спец техники",
+    "category":"Шины для спец техники",
     "season":"Зимные шины",
-    "diametr":"12",
+    "diameter":"12",
     "size":"165/80",
     "price":"684000"
   },
@@ -159,41 +159,41 @@ var rims = [
     "id":1,
     "brand":"WSP Italy",
     "qty": 1,
-    "hole":"4x114,3",
+    "gap":"4x114,3",
     "color":"Серебро",
     "size":"6x15",
     "price":"920000",
-    "hubDiametr":"56.6"
+    "Diameter":"56.6"
   },
   {
     "id":2,
     "brand":"VAG",
     "qty": 1,
-    "hole":"5x112",
+    "gap":"5x112",
     "color":"Серебро",
     "size":"6x16",
     "price":"600000",
-    "hubDiametr":"57.1"
+    "Diameter":"57.1"
   },
   {
     "id":3,
     "brand":"Opel",
     "qty": 1,
-    "hole":"5x110",
+    "gap":"5x110",
     "color":"Серебро",
     "size":"6.5x16",
     "price":"565000",
-    "hubDiametr":"65.1"
+    "Diameter":"65.1"
   },
   {
     "id":4,
     "brand":"VAG",
     "qty": 1,
-    "hole":"5x112",
+    "gap":"5x112",
     "color":"Серый",
     "size":"7.5x18",
     "price":"862000",
-    "hubDiametr":"57.1"
+    "Diameter":"57.1"
   },
 ];
 

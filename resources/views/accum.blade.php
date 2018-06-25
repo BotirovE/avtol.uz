@@ -1,11 +1,15 @@
 @extends('layouts.app')
 @section('scripts')
 	<script type="text/javascript">
-    var accum = @json($accums->items());
-    var accumBrand = @json($brand);
-    var carBrand = @json($car);
+		var accum = @json($accums->items());
+		var accumCapacity = @json($capacity);
+		var accumBrand = @json($brand);
+		var accumName = @json($name);
+		var accumSize = @json($size);
+		var carBrand = @json($car);
   </script>
 @endsection
+
 @section('content')
 	<div class="container" ng-controller="accumSortController">
 		<h2>Аккумуляторы</h2>
@@ -16,7 +20,7 @@
 						<div>
 						<!-- Accum brand -->
 						<h5><strong>Бренд</strong></h5>
-						<select  class="form-control" name="accumBrand" id="accumBrand" ng-model="accumFilter.brand.name" ng-options="brand for brand in accumBrand">
+						<select  class="form-control" name="accumBrand" id="accumBrand" ng-model="accumFilter.brand" ng-options="brand for brand in accumBrand">
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 
@@ -40,7 +44,7 @@
 						
 						<!-- Accum size -->
 						<h5><strong>АКБ для авто</strong></h5>
-						<select class="form-control" name="accumAvto" id="accumAvto" ng-model="accumFilter.car.name" ng-options="avto for avto in accumAvto">
+						<select class="form-control" name="accumAvto" id="accumAvto" ng-model="accumFilter.car" ng-options="avto for avto in accumAvto">
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						<br>
@@ -54,17 +58,17 @@
 					<div class="row accumList">
 						<div class="col-md-12">
 							<div class="item" ng-repeat="accum in accum| filter: accumFilter">
-								<a href="">@{{ accum.brand[0].name }}</a>
+								<a href="">@{{ accum.brand }}</a>
 								<br><br>
 								<div class="row">
-									<div class="col-md-3">
-										<img src="{{ asset('img/items/accum1.png') }}" alt="item">
+									<div class="col-md-3">	
+										<img ng-src="@{{accum.image}}" alt="@{{accum.brand}}">
 									</div>
 									<div class="col-md-5">
 										<h4><span>Наименование АКБ: </span>@{{ accum.name }}</h4>
 										<h4><span>Емкость АКБ (А/ч): </span>@{{ accum.capacity }}</h4>
-										<h4><span>Размер АКБ: </span>@{{ accum.height }}x@{{ accum.width }}x@{{ accum.length }}</h4>
-										<h4><span>АКБ для авто: </span><span ng-repeat="car in accum.car">@{{ car.name }} </span> </h4>
+										<h4><span>Размер АКБ: </span>@{{ accum.size }}</h4>
+										<h4><span>АКБ для авто: </span><span ng-repeat="car in accum.car">@{{ car }} </span> </h4>
 									</div>
 									<div class="col-md-4">
 										<h4>@{{ accum.price + ' sum' }}</h4>

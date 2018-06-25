@@ -1,5 +1,14 @@
 @extends('layouts.app')
-
+@section('scripts')
+	<script type="text/javascript">
+		var rimsGap = @json($gap);
+		var rimsSize = @json($size);
+		var rimsColor = @json($color);
+		var rimsBrand = @json($brand);
+    var rims = @json($wheels->items());
+		var rimsDiameter = @json($diameter);
+  </script>
+@endsection
 @section('content')
 	<div class="container" ng-controller="rimsSortController">
 		<h2>Диски</h2>
@@ -20,15 +29,15 @@
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 
-            <!-- Rims hole -->
+            <!-- Rims gap -->
 						<h5><strong>Отверстия</strong></h5>
-						<select  class="form-control" name="rimsHole" id="rimsHole" ng-model="rimsFilter.hole" ng-options="hole for hole in rimsHole">
+						<select  class="form-control" name="rimsGap" id="rimsGap" ng-model="rimsFilter.gap" ng-options="gap for gap in rimsGap">
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 
- 						<!-- Rims Hub diametr -->
+ 						<!-- Rims Hub diameter -->
 						<h5><strong>Диаметр ступицы, мм</strong></h5>
-						<select  class="form-control" name="rimsHubDiametr" id="rimsHubDiametr" ng-model="rimsFilter.hubDiametr" ng-options="hubDiametr for hubDiametr in rimsHubDiametr">
+						<select  class="form-control" name="rimsDiameter" id="rimsDiameter" ng-model="rimsFilter.diameter" ng-options="diameter for diameter in rimsDiameter">
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 
@@ -47,26 +56,29 @@
 				<div class="list">
 					<div class="row rimsList">
 						<div class="col-md-12">
-							<div class="item" ng-repeat="rims in rims| filter: rimsFilter">
-								<a href="">@{{ rims.brand }}</a>
+							<div class="item" ng-repeat="rim in rims| filter: rimsFilter">
+								<a href="">@{{ rim.brand }}</a>
 								<br><br>
 								<div class="row">
 									<div class="col-md-3">
-										<img src="{{ asset('img/items/rims1.png') }}" alt="item">
+										<img ng-src="@{{rim.image}}" alt="@{{rim.brand}}">
 									</div>
 									<div class="col-md-5">
-										<h4><span>Отверстия: </span>@{{ rims.hole }}</h4>
-										<h4><span>Размер: </span>@{{ rims.size }}</h4>
-										<h4><span>Диаметр ступицы, мм: </span>@{{ rims.hubDiametr }}</h4>
-										<h4><span>Цвет диска: </span>@{{ rims.color }}</h4>
+										<h4><span>Отверстия: </span>@{{ rim.gap }}</h4>
+										<h4><span>Размер: </span>@{{ rim.size }}</h4>
+										<h4><span>Диаметр ступицы, мм: </span>@{{ rim.diameter }}</h4>
+										<h4><span>Цвет диска: </span>@{{ rim.color }}</h4>
 									</div>
 									<div class="col-md-4">
-										<h4>@{{ rims.price + ' sum' }}</h4>
+										<h4>@{{ rim.price + ' sum' }}</h4>
 										<h4><a href="">подробно...</a></h4>
-										<button class="btn btn-primary btn-sm" ng-click="addItem(rims)">Добавить в корзину</button>
+										<button class="btn btn-primary btn-sm" ng-click="addItem(rim)">Добавить в корзину</button>
 									</div>
 								</div>
 							</div>
+							<center>
+								{{$wheels->links()}}
+							</center>
 						</div>
 					</div>
 	      </div>

@@ -26,7 +26,7 @@
                         </tr>
                         @foreach($tyres as $tyre)
                         <tr>
-                            <td><img src="{{ Storage::exists('public/images/tyres/' . $tyre->id) ? asset('storage/images/tyres/' . $tyre->id) : asset('storage/images/tyres/default.jpg')}}"></td>
+                            <td><img src="{{ $tyre->image }}"></td>
                             <td>
                                 @foreach($tyre->brands as $brand)
                                     {{$brand->name}},
@@ -77,7 +77,7 @@
                         @foreach($accums as $accum)
                         <tr>
                             <td>
-                                <img src="{{ Storage::exists('public/images/accums/' . $accum->id) ? asset('storage/images/accums/' . $accum->id) : asset('storage/images/accums/default.jpg')}}">
+                                <img src="{{ $accum->image }}">
                             </td>
                             <td>
                                 @foreach($accum->brands as $brand)
@@ -129,7 +129,7 @@
                         @foreach($wheels as $wheel)
                         <tr>
                             <td>
-                                <img src="{{ Storage::exists('public/images/wheels/' . $wheel->id) ? asset('storage/images/wheels/' . $wheel->id) : asset('storage/images/wheels/default.jpg')}}">
+                                <img src="{{ $wheel->image }}">
                             </td>
                             <td>
                                 @foreach($wheel->brands as $brand)
@@ -179,7 +179,7 @@
                         @foreach($mats as $mat)
                         <tr>
                             <td>
-                                <img src="{{ Storage::exists('public/images/mats/' . $mat->id) ? asset('storage/images/mats/' . $mat->id) : asset('storage/images/mats/default.jpg')}}">
+                                <img src="{{ $mat->image }}">
                             </td>
                             <td>
                                 @foreach($mat->brands as $brand)

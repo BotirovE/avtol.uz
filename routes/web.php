@@ -15,19 +15,6 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/carpet', function () {
-    return view('carpet');
-})->name('carpet');
-Route::get('/accum', function () {
-    return view('accum');
-})->name('accum');
-Route::get('/tyres', function () {
-    return view('tyres');
-})->name('tyres');
-Route::get('/rims', function () {
-    return view('rims');
-})->name('rims');
-
 Route::get('/product', function () {
     return view('individual');
 })->name('product');
@@ -68,5 +55,7 @@ Route::namespace('Admin')->middleware(['auth:admin'])->prefix('admin')->name('ad
     ]);
 });
 
+Route::get('/mats', 'PagesController@mats')->name('mats');
+Route::get('/rims', 'PagesController@wheels')->name('rims');
+Route::get('/tyres', 'PagesController@tyres')->name('tyres');
 Route::get('/accums', 'PagesController@accums')->name('accums');
-

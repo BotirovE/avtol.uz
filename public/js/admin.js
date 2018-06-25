@@ -80,7 +80,7 @@ window.onload = function () {
 };
 
 function editBrand(id, name) {
-    var action = '{{ route("admin.brands.update", ":id") }}';
+    var action = '/admin/brands/:id';
     action = action.replace(':id', id);
     document.getElementById('updated_form').action = action;
     document.getElementById('updated_name').value = name;

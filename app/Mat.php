@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Mat extends Model
 {
@@ -18,7 +19,7 @@ class Mat extends Model
      *
      * @var array
      */
-    protected $hidden = ['created_at', 'updated_at', 'pivot'];
+    protected $hidden = ['created_at', 'updated_at', 'pivot', 'brands'];
     
     /**
      * Get all of the mat's orders.
@@ -35,4 +36,31 @@ class Mat extends Model
     {
         return $this->morphToMany('App\Brand', 'brandable');
     }
+
+    /**
+     * Get the brand of the mat.
+     *
+     * @return string
+     */
+    public function getBrandAttribute()
+    {
+        return $this->brands->where('isCar',0)->first()->name;
+    }
+
+    /**
+     * Get the image_path of the accumulator.
+     *
+     * @return string
+     */
+    public function getImageAttribute()
+    {
+        return Storage::exists('public/images/mats/' . $this->id) ? asset('storage/images/mats/' . $this->id) : asset('storage/images/mats/default.jpg');
+    }
+
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = ['brand', 'image'];
 }

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Accumulator extends Model
 {
@@ -18,7 +19,7 @@ class Accumulator extends Model
      *
      * @var array
      */
-    protected $hidden = ['created_at', 'updated_at', 'pivot'];
+    protected $hidden = ['created_at', 'updated_at', 'pivot','brands'];
     
     /**
      * Get all of the accumulator's orders.
@@ -37,21 +38,49 @@ class Accumulator extends Model
     }
 
     /**
-     * Get brand of the accumulator.
+     * Get the brand of the accumulator.
+     *
+     * @return string
      */
-    public function brand()
+    public function getBrandAttribute()
     {
-
-        return $this->brands()->where('isCar',0);
+        return $this->brands->where('isCar',0)->first()->name;
     }
 
     /**
-     * Get brand of the car that is accumulator for.
+     * Get the brand of cars that is the accumulator for.
+     *
+     * @return array
      */
-    public function car()
+    public function getCarAttribute()
     {
-
-        return $this->brands()->where('isCar',1);
+        return $this->brands->where('isCar',1)->pluck('name');
     }
 
+    /**
+     * Get the size of the accumulator.
+     *
+     * @return string
+     */
+    public function getSizeAttribute()
+    {
+        return "{$this->height}x{$this->width}x{$this->length}";
+    }
+
+    /**
+     * Get the image_path of the accumulator.
+     *
+     * @return string
+     */
+    public function getImageAttribute()
+    {
+        return Storage::exists('public/images/accums/' . $this->id) ? asset('storage/images/accums/' . $this->id) : asset('storage/images/accums/default.jpg');
+    }
+
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = ['brand', 'car', 'size', 'image'];
 }

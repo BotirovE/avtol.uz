@@ -1,5 +1,14 @@
 @extends('layouts.app')
-
+@section('scripts')
+	<script type="text/javascript">
+		var tyresCategory = @json($category);
+		var tyresDiameter = @json($diameter);
+    var tyres = @json($tyres->items());
+		var tyresSeason = @json($season);
+		var tyresBrand = @json($brand);
+		var tyresSize = @json($size);
+  </script>
+@endsection
 @section('content')
 	<div class="container" ng-controller="tyresSortController">
 		<h2>Шины</h2>
@@ -8,9 +17,9 @@
 				<div class="filterBar">
 					<form action="">
 						<div>
-						<!-- Tyres type -->
+						<!-- Tyres category -->
 						<h5><strong>Тип шины</strong></h5>
-          	<select  class="form-control" name="tyresType" id="tyresType" ng-model="filter.type" ng-options="type for type in tyresType">
+          	<select  class="form-control" name="tyresCategory" id="tyresCategory" ng-model="filter.category" ng-options="category for category in tyresCategory">
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						
@@ -26,9 +35,9 @@
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						
-						<!-- Tyres diametr -->
+						<!-- Tyres diameter -->
 						<h5><strong>Диаметр</strong></h5>
-						<select  class="form-control" name="tyresDiametr" id="tyresDiametr" ng-model="filter.diametr" ng-options="diametr for diametr in tyresDiametr">
+						<select  class="form-control" name="tyresDiameter" id="tyresDiameter" ng-model="filter.diameter" ng-options="diameter for diameter in tyresDiameter">
               <option value="" disabled selected hidden>Выбрать</option>
             </select>
 						
@@ -52,12 +61,12 @@
 								<br><br>
 								<div class="row">
 									<div class="col-md-3">
-										<img src="{{ asset('img/items/title-img.png') }}" alt="item">
+										<img ng-src="@{{tyre.image}}" alt="@{{tyre.brand}}">
 									</div>
 									<div class="col-md-5">
-										<h4><span>Тип шины: </span>@{{ tyre.type }}</h4>
+										<h4><span>Тип шины: </span>@{{ tyre.category }}</h4>
 										<h4><span>Сезонность шин: </span>@{{ tyre.season }}</h4>
-										<h4><span>Диаметр: </span>@{{ tyre.diametr }}</h4>
+										<h4><span>Диаметр: </span>@{{ tyre.diameter }}</h4>
 										<h4><span>Размерность: </span>@{{ tyre.size }}</h4>
 									</div>
 									<div class="col-md-4">
@@ -67,6 +76,9 @@
 									</div>
 								</div>
 							</div>
+							<center>
+								{{$tyres->links()}}
+							</center>
 						</div>
 					</div>
 	      </div>

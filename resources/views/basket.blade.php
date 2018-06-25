@@ -16,7 +16,7 @@
         		</tr>
         		<tr class="animate-repeat" ng-repeat="item in cart">
         			<td>
-        				<img src="{{ asset('img/items/title-img.png') }}" class="cartImage" alt="item">
+        				<img ng-src="@{{item.image}}" class="cartImage" alt="item">
         				<span>@{{ item.brand }}</span>
         			</td>
         			<td>

@@ -35,7 +35,9 @@
     </div>
     <br>
     <br>
-    <script src={{ asset('js/admin.js') }}></script>
+    @auth
+        <script src={{ asset('js/admin.js') }}></script>
+    @endauth
     @yield('script')
 </body>
 </html>
