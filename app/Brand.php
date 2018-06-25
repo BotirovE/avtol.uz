@@ -12,6 +12,14 @@ class Brand extends Model
      * @var array
      */
     protected $guarded = [];
+         
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = ['created_at', 'updated_at', 'pivot', 'isCar'];
+    
     /**
      * Get all of the wheels that are assigned this brand.
      */

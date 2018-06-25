@@ -1,5 +1,11 @@
 @extends('layouts.app')
-
+@section('scripts')
+	<script type="text/javascript">
+    	var carpet = @json($mats->items());
+		var carpetBrand = @json($brand);
+		var carpetColor = @json($color);
+  </script>
+@endsection
 @section('content')
 	<div class="container" ng-controller="carpetSortController">
 		<h2>Шины</h2>
@@ -34,7 +40,7 @@
 								<br><br>
 								<div class="row">
 									<div class="col-md-3">
-										<img src="{{ asset('img/items/carpet.png') }}" alt="item">
+										<img ng-src="@{{carpet.image}}" alt="@{{carpet.brand}}">
 									</div>
 									<div class="col-md-5">
 										<h4><span>Цвет: </span>@{{ carpet.color }}</h4>
@@ -46,10 +52,13 @@
 									</div>
 								</div>
 							</div>
+							<center>
+								{{$mats->links()}}
+							</center>
 						</div>
 					</div>
-	      </div>
-	  	</div>
+	      		</div>
+	  		</div>
 		</div>
 	</div>
 	<br>

@@ -46,7 +46,7 @@ class BrandController extends Controller
         $brand->mats()->detach();
         $brand->tyres()->detach();
         $brand->wheels()->detach();
-        $brand->accumulators()->detach();
+        $brand->accums()->detach();
         $brand->delete();
         return back();
     }

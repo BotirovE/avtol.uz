@@ -1,5 +1,5 @@
 function switchSection(id) {
-    document.cookie = "adminPage=" + id + ";";
+    document.cookie = "adminNav=" + id + ";";
     let section = document.getElementsByClassName('section');
     for (let i = 0; i < section.length; i++)
         section[i].style.display = "none";
@@ -33,9 +33,9 @@ function getCookie(cname) {
     return "all";
 }
 window.onload = function () {
-    switchSection(getCookie("adminPage"));
+    switchSection(getCookie("adminNav"));
     let navs = document.getElementsByClassName("navs");
-    switch(getCookie("adminPage")) {
+    switch(getCookie("adminNav")) {
         case "all":
             navs[0].className = "navs active";
             break;
@@ -80,7 +80,7 @@ window.onload = function () {
 };
 
 function editBrand(id, name) {
-    var action = '{{ route("admin.brands.update", ":id") }}';
+    var action = '/admin/brands/:id';
     action = action.replace(':id', id);
     document.getElementById('updated_form').action = action;
     document.getElementById('updated_name').value = name;

@@ -3,11 +3,11 @@ var app = angular.module("app", []);
 app.controller("tyresSortController", ["$scope", function ($tyres) {
   $tyres.tyres = tyres;
   // define list of items
-  $tyres.tyresType = ["Легковые шины","Легко-грузовые шины","Грузовые шины","Сельскохозяйственные шины","Шины для спец техники"];
-  $tyres.tyresSeason = ["Летные шины","Зимные шины","Всесезонные шины"];
-  $tyres.tyresBrand = ["Pirelli","Dunlop","Cooper","Hankook"];
-  $tyres.tyresDiametr = ["12","13","14","15","17","17.5","19"];
-  $tyres.tyresSize = ["135/80","145/65","145/70","155/60","165/80","185"];
+  $tyres.tyresCategory = tyresCategory;
+  $tyres.tyresSeason = tyresSeason;
+  $tyres.tyresBrand = tyresBrand;
+  $tyres.tyresDiameter = tyresDiameter;
+  $tyres.tyresSize = tyresSize;
 
 	$tyres.filter = {};
   // reset the filter
@@ -20,9 +20,9 @@ app.controller("accumSortController", ["$scope", function ($accum) {
   $accum.accum = accum;
   // define list of items
   $accum.accumBrand = accumBrand;
-  $accum.accumName = ["6CT-35","6CT-50","6CT-66","6CT-55","6CT-150"];
-  $accum.accumCapacity = ["35","50","66","55","150"];
-  $accum.accumSize = ["199x131x227","200x170x190","277x175x190","242x175x190","515x191x239"];
+  $accum.accumName = accumName;
+  $accum.accumCapacity = accumCapacity;
+  $accum.accumSize = accumSize;
   $accum.accumAvto = carBrand;
 
   $accum.accumFilter = {};
@@ -36,11 +36,11 @@ app.controller("accumSortController", ["$scope", function ($accum) {
 app.controller("rimsSortController", ["$scope", function ($rims) {
   $rims.rims = rims;
   // define list of items
-  $rims.rimsBrand = ["WSP Italy","VAG","Opel"];
-  $rims.rimsSize = ["6x15","6x16","5x110","5x112"];
-  $rims.rimsColor = ["Серебро","Серый","Хром","Чёрный"];
-  $rims.rimsHole = ["5x112","4x114,3","5x110","5x112"];
-  $rims.rimsHubDiametr = ["65.1","57.1","56.6"];
+  $rims.rimsBrand = rimsBrand;
+  $rims.rimsSize = rimsSize;
+  $rims.rimsColor = rimsColor;
+  $rims.rimsGap = rimsGap;
+  $rims.rimsDiameter = rimsDiameter;
 
   $rims.rimsFilter = {};
   // reset the filter
@@ -53,8 +53,8 @@ app.controller("rimsSortController", ["$scope", function ($rims) {
 app.controller("carpetSortController", ["$scope", function ($carpet) {
   $carpet.carpet = carpet;
       // define list of items
-  $carpet.carpetBrand = ["Novline", "Airline"];
-	$carpet.carpetColor = ["Серебро","Серый","Хром","Чёрный","Красный"];
+  $carpet.carpetBrand = carpetBrand;
+	$carpet.carpetColor = carpetColor;
 
 	$carpet.carpetFilter = {};
   // reset the filter
