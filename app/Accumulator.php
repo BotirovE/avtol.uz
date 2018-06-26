@@ -78,9 +78,19 @@ class Accumulator extends Model
     }
 
     /**
+     * Get the type of product.
+     *
+     * @return string
+     */
+    public function getTypeAttribute()
+    {
+        return "accum";
+    }
+
+    /**
      * The accessors to append to the model's array form.
      *
      * @var array
      */
-    protected $appends = ['brand', 'car', 'size', 'image'];
+    protected $appends = ['brand', 'car', 'size', 'image', 'type'];
 }

@@ -146,6 +146,7 @@ html,body{
       margin-left: -15px;
     } 
     .dropdown-menu{
+      display: block!important;
       box-shadow: 0 0 15px #757575;
       width: 290px;
       padding: 0;
@@ -170,6 +171,7 @@ html,body{
         .cart-panel-body{
           padding: 20px 10px;
           .cartList{
+            width: 100%;
             padding: 0 10px;
             list-style: none;
             p{

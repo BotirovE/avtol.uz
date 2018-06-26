@@ -60,7 +60,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>                        
 		      </button>
-		      <a class="navbar-brand" href="{{ route('index') }}">avtol.uz</a>
+		      <a class="navbar-brand" href="{{ route('index') }}">AvtoMakon.uz</a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
@@ -109,6 +109,7 @@
 									          </button>
 							        		</li>
 										    </ul>
+										    <br />
 							        </li>
 							      </ul>
 							      <br>

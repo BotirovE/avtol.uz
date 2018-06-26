@@ -81,14 +81,14 @@ app.controller('cart', function ($scope) {
   }
   loadCart();
 
-	$scope.countCart = function () { // -> return total count
-    var totalCount = 0;
-    for (var i in $scope.cart) {
-        totalCount += $scope.cart[i].count;
-    }
-    totalCount;
-    $('#counter').innerHTML = totalCount;
-  };
+	// $scope.countCart = function () { // -> return total count
+ //    var totalCount = 0;
+ //    for (var i in $scope.cart) {
+ //        totalCount += $scope.cart[i].count;
+ //    }
+ //    totalCount;
+ //    $('#counter').innerHTML = totalCount;
+ //  };
 	
   $scope.getCost = function(item) {
     return item.count * item.price;
@@ -101,7 +101,7 @@ app.controller('cart', function ($scope) {
 	 	} else {
 	 		var repeat = false;
 	 		for(var i = 0; i< $scope.cart.length; i++){
-	 			if($scope.cart[i].id === product.id){
+	 			if($scope.cart[i].id === product.id && $scope.cart[i].type === product.type){
 	 				repeat = true;
 	 				$scope.cart[i].count +=1;
 	 			}

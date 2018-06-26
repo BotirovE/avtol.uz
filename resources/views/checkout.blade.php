@@ -74,7 +74,7 @@
 											</a>
 										</li>
 								  <li>
-								  	<a data-toggle="tab" class="deliveryType" href="#menu1">
+								  	<a data-toggle="tab" class="deliveryType" href="#map">
 								  		Выбрать Pick-up Point.
 								  		<p>Забрать товар из выбранного Pick-up Point на карте.</p>
 								  	</a>
@@ -87,12 +87,6 @@
 								    <p>Товар будет доставлен в удобное для Вас место.</p>
 								    <br />
 								    <form action="">
-								    	<div class="row">
-								    		<div class="col-md-6">
-						    			
-								    		</div>
-								    		<div class="col-md-6"></div>
-								    	</div>
 								    	<div class="row">
 									    	<div class="col-md-6">
 								    			{{-- <input type="text" class="form-control" placeholder="Район*" required> --}}
@@ -136,9 +130,8 @@
 								    	<br />
 								    </form>
 								  </div>
-								  <div id="menu1" class="tab-pane fade">
-								    <h3>Menu 1</h3>
-								    <p>Some content in menu 1.</p>
+								  <div id="map" class="tab-pane fade">
+								    <p>Укажите адрес</p>
 								  </div>
 							  </div>
 							</div>
@@ -151,5 +144,5 @@
 			</div>
 		</div>
 	</div>
-	<br>
+	<br />
 @endsection

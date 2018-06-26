@@ -58,9 +58,19 @@ class Tyre extends Model
     }
 
     /**
+     * Get the type of product.
+     *
+     * @return string
+     */
+    public function getTypeAttribute()
+    {
+        return "tyre";
+    }
+
+    /**
      * The accessors to append to the model's array form.
      *
      * @var array
      */
-    protected $appends = ['brand', 'image'];
+    protected $appends = ['brand', 'image', 'type'];
 }
