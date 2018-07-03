@@ -90,6 +90,9 @@ html, body {
   margin-bottom: 0;
   background: none; }
 
+.navbar-form .input-group > .search, .input-group-btn:last-child > .searchBtn {
+  height: 35px; }
+
 .narbarBlock {
   background: linear-gradient(rgba(122, 183, 43, 0.6), rgba(122, 183, 43, 0.6)); }
 
@@ -136,6 +139,7 @@ html, body {
     .navbar-nav > li .dropdown-menu .panel .cart-panel-body {
       padding: 20px 10px; }
       .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList {
+        width: 100%;
         padding: 0 10px;
         list-style: none; }
         .navbar-nav > li .dropdown-menu .panel .cart-panel-body .cartList p {
@@ -182,7 +186,7 @@ html, body {
   -moz-border-radius: 50%;
   border-radius: 50%;
   color: #fff;
-  padding: 2px 0; }
+  padding: 3px 0; }
   .cartCounter p {
     position: absolute;
     left: 50%;
@@ -246,6 +250,15 @@ html, body {
     height: 56px; }
 
 /* order page */
+.ordering .orderList {
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  box-shadow: 0 0 10px #bdbdbd; }
+  .ordering .orderList .total {
+    float: right; }
+.ordering .orderHeader {
+  text-transform: uppercase; }
 .ordering .phoneVerify, .ordering .contactInfo {
   width: 100%;
   background: #fff;

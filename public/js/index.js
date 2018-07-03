@@ -125,7 +125,12 @@ app.controller('cart', function ($scope) {
   $scope.getTotal = function() {
     var total = 0;
     angular.forEach($scope.cart, function(item) {
-      total += item.price * item.count;
+      if ($('.delivery').value === 'express') {
+        total += (item.price * item.count)+15000;
+      }
+      else{
+        total += item.price * item.count;
+      }
     })
     return total;
     saveCart();

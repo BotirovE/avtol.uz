@@ -45,7 +45,7 @@
 			<div class="col-md-3">
 				<div class="cartSide">
 					<h3>Итого:</h3>
-				  <h4>Стоимость: @{{ getTotal()| filter:nospace }}</h4>
+				  <h4>Стоимость: @{{ getTotal()}}</h4>
 				  <hr>
 					<button class="btn btn-success btn-sm" onclick="location.href='{{ route('checkout')}}'">Оформить заказ</button>
 					<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">Очистить корзину</button>

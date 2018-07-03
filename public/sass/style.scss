@@ -114,6 +114,9 @@ html,body{
   margin-bottom: 0; 
   background: none;
 }
+.navbar-form .input-group>.search,.input-group-btn:last-child>.searchBtn{
+  height: 35px;
+}
 .narbarBlock{
   background: linear-gradient(rgba(122,183,43,.6),rgba(122,183,43,.6));
 }
@@ -146,7 +149,6 @@ html,body{
       margin-left: -15px;
     } 
     .dropdown-menu{
-      display: block!important;
       box-shadow: 0 0 15px #757575;
       width: 290px;
       padding: 0;
@@ -233,7 +235,7 @@ html,body{
   -moz-border-radius: 50%;
   border-radius: 50%;
   color: #fff;
-  padding: 2px 0;
+  padding: 3px 0;
   p{
     position: absolute;
     left: 50%;
@@ -308,6 +310,18 @@ html,body{
 }
 /* order page */
 .ordering{
+  .orderList{
+    width: $width;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 0 10px #bdbdbd;
+    .total{
+      float: right;
+    }
+  }
+  .orderHeader{
+    text-transform: uppercase;
+  }
   .phoneVerify,.contactInfo{
     width: 100%;
     background: #fff;
