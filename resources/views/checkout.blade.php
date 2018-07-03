@@ -135,21 +135,15 @@
 								    <p>Укажите адрес</p>
 								    <form action="" method="post">
 					            <div class="col-md-8">
-					              <div class="map-body" style="height: 400px;padding: 6px">
-					                <div id="navigationMap" style="height: 100%; width: 100%;"></div>
+					              <div class="mapBody" style="height: 400px;padding: 6px">
+					                <div id="navigationMap1" style="height: 100%; width: 100%;"></div>
 					              </div>
 					            </div>
 					            <div class="col-md-4">
 					              <div class="form-group col-md-12">
 					                <h4>УКАЖИТЕ АДРЕС</h4>
 					                <div><br /></div>
-					                <textarea rows="3" style="resize: none" type="text" name="address_a" class="form-control" id="trucking_address_a" placeholder="Куда"></textarea>
-						              <!-- <div class="col-md-1">
-						                  <button type="button" class="btn btn-default" data-toggle="modal"
-						                          data-target="#mainModal" onclick="setStartPoint()">
-						                      <i class="fa fa-map-marker-alt"></i>
-						                  </button>
-						              </div> -->
+					                <textarea rows="3" style="resize: none" name="address_a" class="form-control" id="trucking_address_a" placeholder="Куда"></textarea>
 					              </div>
 					              <input type="hidden" name="point_a" id="trucking_point_a">
 					              <div class="col-md-12"><hr /></div>
@@ -227,7 +221,7 @@
 
 	    function initMaps() {
 
-	        navigationMap = new ymaps.Map("navigationMap", {
+	        navigationMap = new ymaps.Map("navigationMap1", {
 	          center: [41.3109772515277, 69.27950934178443],
 	          zoom: 14,
 	          controls: []

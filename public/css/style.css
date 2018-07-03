@@ -4,7 +4,6 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #F3F4F6;
-  overflow-x: hidden;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .main {
@@ -223,11 +222,7 @@ html, body {
   background: #fff;
   width: 100%;
   padding: 10px 5px;
-  border-radius: 4px;
-  /*  .fa-hand-point-up,.fa-file-alt{
-      font-size: 32px!important;
-      padding: 7px 12px!important;
-    }*/ }
+  border-radius: 4px; }
   .offerGuide h3 {
     margin: 0; }
   .offerGuide .rubric__infoblock {
@@ -812,56 +807,5 @@ ul.social-buttons li a {
     display: none; }
   .popularItem .popularMoreBtn {
     display: block !important; } }
-/* 
-.icon-bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50px;
-top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-Style the icon bar links
-.icon-bar a {
-  display: block;
-  text-align: center;
-  padding: 16px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 20px;
-}
-
-Style the social media icons with color, if you want
-.icon-bar a:hover {
-  background-color: #000;
-}
-
-.facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.google {
-  background: #dd4b39;
-  color: white;
-}
-
-.linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.youtube {
-  background: #bb0000;
-  color: white;
-}  */
 
 /*# sourceMappingURL=style.css.map */

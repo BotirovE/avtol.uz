@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>@yield('title','Avtol.uz')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- links -->
   <link rel="shortcut icon" href="{{ asset('img/title.png') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
